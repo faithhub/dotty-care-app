@@ -20528,8 +20528,23 @@ hr.horizontal.gray-light {
     box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
 }
 
+.nav-item-active {
+    background-color: #252c3b !important;
+    box-shadow: none;
+    border-radius: 5px;
+}
+.nav-item-active span{
+    color: #fff !important;
+    font-weight: 600;
+}
+.nav-item-active i{
+    color: #fff !important;
+    font-weight: 600;
+}
+
+
 .navbar-vertical.bg-white .navbar-nav > .nav-item .nav-link.active {
-    background-color: #f6f9fc;
+    background-color: #161b20;
     box-shadow: none;
 }
 
@@ -20540,7 +20555,7 @@ hr.horizontal.gray-light {
 }
 
 .navbar-vertical .navbar-nav > .nav-item .nav-link.active {
-    color: #344767;
+    color: #fff;
     background-color: hsla(0, 0%, 100%, 0.13);
 }
 

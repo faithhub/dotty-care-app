@@ -69,43 +69,24 @@
                         <span class="nav-link-text ms-1">Dashboard</span>
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a data-bs-toggle="collapse" href="#ecommerceExamples"
-                        class="nav-link {{ request()->is('users') || request()->is('add-user') ? 'active' : '' }}"
-                        aria-controls="ecommerceExamples" role="button" aria-expanded="false">
+                    <a href="{{ route('add-user') }}"
+                        class="nav-link {{ request()->is('call-details') || request()->is('add-user') || request()->is('assessment')|| request()->is('treatement')|| request()->is('call-report') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                            <i class="ni ni-archive-2 text-success text-sm opacity-10"></i>
+                            <i class="ni ni-circle-08 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Users</span>
+                        <span class="nav-link-text ms-1">Add New User</span>
                     </a>
-                    <div class="collapse" id="ecommerceExamples">
-                        <ul class="nav ms-4">
-                            <li class="nav-item active">
-                                <a class="nav-link {{ request()->is('users') ? 'active' : '' }}"
-                                    href="{{ route('users') }}">
-                                    <span class="sidenav-normal"> All Users </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="collapse" id="ecommerceExamples">
-                        <ul class="nav ms-4">
-                            <li class="nav-item active">
-                                <a class="nav-link {{ request()->is('add-user') ? 'active' : '' }}"
-                                    href="{{ route('add-user') }}">
-                                    <span class="sidenav-normal"> Add New User </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('profile') }}" class="nav-link {{ request()->is('profile') ? 'active' : '' }}"
                         aria-controls="pagesExamples" role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                            <i class="ni ni-ungroup text-warning text-sm opacity-10"></i>
+                            <i class="ni ni-single-02 text-warning text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Profile</span>
                     </a>
@@ -129,7 +110,7 @@
                               document.getElementById('logout-form').submit();"
                     class="nav-link" aria-controls="authExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                        <i class="ni ni-lock-circle-open text-danger text-sm opacity-10"></i>
+                        <i class="ni ni-button-power text-danger text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-1">Logout</span>
                 </a>
