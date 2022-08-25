@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             @if (Auth::user()->role == 'user')
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ route('call-details') }}" class="nav-link active" aria-controls="pagesExamples"
                         role="button" aria-expanded="false">
                         <div
@@ -43,7 +43,7 @@
                         </div>
                         <span class="nav-link-text ms-1">Treatment</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="nav-item">
                     <a href="#authExamples" class="nav-link" aria-controls="authExamples" role="button"
