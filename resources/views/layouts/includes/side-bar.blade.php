@@ -12,39 +12,16 @@
     <div class="collapse navbar-collapse w-auto h-auto" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             @if (Auth::user()->role == 'user')
-                {{-- <li class="nav-item">
-                    <a href="{{ route('call-details') }}" class="nav-link active" aria-controls="pagesExamples"
-                        role="button" aria-expanded="false">
+                <li class="nav-item">
+                    <a href="{{ route('user') }}" class="nav-link {{ request()->is('user') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                            <i class="ni ni-ungroup text-warning text-sm opacity-10"></i>
+                            <i class="ni ni-shop text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Call Details</span>
+                        <span class="nav-link-text ms-1">Dashboard</span>
                     </a>
                 </li>
-
-                <li class="nav-item">
-                    <a href="assessment.html" class="nav-link" aria-controls="ecommerceExamples" role="button"
-                        aria-expanded="false">
-                        <div
-                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                            <i class="ni ni-archive-2 text-success text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Assessment</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="treatment.html" class="nav-link" aria-controls="ecommerceExamples" role="button"
-                        aria-expanded="false">
-                        <div
-                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
-                            <i class="ni ni-archive-2 text-success text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Treatment</span>
-                    </a>
-                </li> --}}
-
                 <li class="nav-item">
                     <a href="#authExamples" class="nav-link" aria-controls="authExamples" role="button"
                         aria-expanded="false">
@@ -53,6 +30,28 @@
                             <i class="ni ni-single-copy-04 text-secondary text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Call Report</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('profile') }}" class="nav-link {{ request()->is('profile') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ni ni-single-02 text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('password') }}"
+                        class="nav-link {{ request()->is('update-password') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ni ni-ungroup text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Change Password</span>
                     </a>
                 </li>
             @endif
@@ -72,7 +71,7 @@
 
                 <li class="nav-item">
                     <a href="{{ route('add-user') }}"
-                        class="nav-link {{ request()->is('call-details') || request()->is('add-user') || request()->is('assessment')|| request()->is('treatement')|| request()->is('call-report') ? 'active' : '' }}"
+                        class="nav-link {{ request()->is('call-details') || request()->is('add-user') || request()->is('assessment') || request()->is('treatement') || request()->is('call-report') ? 'active' : '' }}"
                         aria-controls="pagesExamples" role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">

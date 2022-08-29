@@ -38,7 +38,7 @@ Route::match(['get', 'post'], 'paramedics', [App\Http\Controllers\Auth\RegisterC
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['user']], function () {
         // User
-        Route::match(['get', 'post'], 'user', [App\Http\Controllers\CallDetailsController::class, 'index'])->name('user');
+        Route::match(['get', 'post'], 'user', [App\Http\Controllers\Usercontroller::class, 'index'])->name('user');
         Route::match(['get', 'post'], 'call-details', [App\Http\Controllers\CallDetailsController::class, 'index'])->name('call-details');
     });
     Route::group(['middleware' => ['paramedic']], function () {
