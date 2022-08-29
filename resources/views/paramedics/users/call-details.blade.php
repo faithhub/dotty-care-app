@@ -72,12 +72,12 @@
                                         <div class="multisteps-form__content">
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
-                                                    <label>Surname</label>
+                                                    <label>Surname <span class="text-danger">*</span></label>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="Surname" />
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
-                                                    <label>First Name</label>
+                                                    <label>First Name <span class="text-danger">*</span></label>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="First Name" />
                                                 </div>
@@ -85,12 +85,12 @@
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
-                                                    <label>Street</label>
+                                                    <label>Street</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
-                                                    <label>City</label>
+                                                    <label>City</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
@@ -98,12 +98,12 @@
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-5 ms-auto mt-3">
-                                                    <label>Province</label>
+                                                    <label>Province</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-6 col-md-5 ms-auto mt-3">
-                                                    <label for="country">Country</label>
+                                                    <label for="country">Country</label> <span class="text-danger">*</span>
                                                     <!--span style="color: red !important; display: inline; float: none;">*</span-->
 
                                                     <select id="country" name="country" class="form-control">
@@ -177,17 +177,17 @@
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-5 ms-auto mt-3">
-                                                    <label>Telephone</label>
+                                                    <label>Telephone</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-6 col-md-5 ms-auto mt-3">
-                                                    <label>Date Of Birth</label>
+                                                    <label>Date Of Birth</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="date"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-12 col-md-2 ms-auto mt-3">
-                                                    <label>Race</label>
+                                                    <label>Race</label> <span class="text-danger">*</span>
                                                     <select class="form-control col-4 col-md-2" name="choose-race"
                                                         id="choose-race">
                                                         <option value="">select</option>
@@ -200,12 +200,12 @@
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-4 ms-auto mt-3">
-                                                    <label>Age</label>
+                                                    <label>Age</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="number"
                                                         placeholder="Age" />
                                                 </div>
                                                 <div class="col-6 col-md-4 ms-auto mt-3">
-                                                    <label>Gender</label>
+                                                    <label>Gender</label> <span class="text-danger">*</span>
                                                     <!--input class="multisteps-form__input form-control" type="text" placeholder="Gender" /-->
                                                     <select class="multisteps-form__input form-control" name="gender">
                                                         <option value="none" selected>select</option>
@@ -223,7 +223,7 @@
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
-                                                    <label>Temporary ID</label>
+                                                    <label>Temporary ID</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
@@ -259,7 +259,7 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-3 ms-auto mt-2">
                                                     <h6> </h6>
-                                                    <label>Time Notified</label>
+                                                    <label>Time Notified</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="time"
                                                         placeholder="Notified" />
                                                 </div>
@@ -269,7 +269,7 @@
                                                         placeholder="En Route" />
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
-                                                    <label>Time At Scence</label>
+                                                    <label>Time At Scence</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="time"
                                                         placeholder="At Scence" />
                                                 </div>
@@ -279,12 +279,12 @@
                                                         placeholder="Crew Patient" />
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
-                                                    <label>Time Out of Scence</label>
+                                                    <label>Time Out of Scence</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="time"
                                                         placeholder="Left Scence" />
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
-                                                    <label>Time At Destination</label>
+                                                    <label>Time At Destination</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="time"
                                                         placeholder="At Destination" />
                                                 </div>
@@ -439,22 +439,22 @@
                                         <div class="multisteps-form__content">
                                             <div class="row text-start">
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
-                                                    <label>Service Code</label>
+                                                    <label>Service Code</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
-                                                    <label>Service Type</label>
+                                                    <label>Service Type</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
-                                                    <label>Date Of Incident</label>
+                                                    <label>Date Of Incident</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="date"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
-                                                    <label>Time Of Incident</label>
+                                                    <label>Time Of Incident</label> <span class="text-danger">*</span>
                                                     <input class="multisteps-form__input form-control" type="time"
                                                         placeholder="" />
                                                 </div>
@@ -463,22 +463,22 @@
                                             <div class="multisteps-form__content">
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-5 ms-auto mt-2">
-                                                        <label>Incident Location</label>
+                                                        <label>Incident Location</label> <span class="text-danger">*</span>
                                                         <input class="multisteps-form__input form-control" type="text"
                                                             placeholder="Street" />
                                                     </div>
                                                     <div class="col-12 col-md-3 ms-auto mt-3">
-                                                        <label></label>
+                                                        <label></label><span class="text-danger">*</span>
                                                         <input class="multisteps-form__input form-control" type="text"
                                                             placeholder="City" />
                                                     </div>
                                                     <div class="col-12 col-md-2 ms-auto mt-3">
-                                                        <label></label>
+                                                        <label></label><span class="text-danger">*</span>
                                                         <input class="multisteps-form__input form-control" type="text"
                                                             placeholder="Province" />
                                                     </div>
                                                     <div class="col-12 col-md-2 ms-auto mt-3">
-                                                        <label></label>
+                                                        <label></label><span class="text-danger">*</span>
                                                         <input class="multisteps-form__input form-control" type="text"
                                                             placeholder="Postal Code" />
                                                     </div>
