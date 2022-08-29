@@ -46,38 +46,16 @@
                     <div class="card">
                         <div class="card-body pb-3">
                             <div class="text-center">
-                                <h5>Register User</h5>
+                                <h5>Check User</h5>
                             </div>
                             <form role="form" method="POST" action="{{ route('register') }}">
                                 @csrf
-                                <label>Email Address</label>
+                                <label>User's Unique Identification Number</label>
                                 <div class="mb-3">
-                                    <input type="email" name="email"
-                                        class="form-control @error('email') is-invalid @enderror"
-                                        placeholder="Email Address" aria-label="Email" value="{{ old('email') }}">
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <label>Password</label>
-                                <div class="mb-3">
-                                    <input type="password" name="password"
-                                        class="form-control @error('password') is-invalid @enderror" placeholder="Password"
-                                        aria-label="Password">
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <label>Confirm Password</label>
-                                <div class="mb-3">
-                                    <input type="password" name="password_confirmation"
-                                        class="form-control @error('password_confirmation') is-invalid @enderror"
-                                        placeholder="Confirm Password" aria-label="Confirm Password">
-                                    @error('password_confirmation')
+                                    <input type="text" name="unique_id"
+                                        class="form-control @error('unique_id') is-invalid @enderror"
+                                        placeholder="Unique Identification Number" aria-label="Email" value="{{ old('unique_id') }}">
+                                    @error('unique_id')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -85,7 +63,7 @@
                                 </div>
                                 <div class="text-right mb-3 mt-4">
                                     <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Send">
-                                        Submit
+                                        Check
                                     </button>
                                 </div>
                             </form>

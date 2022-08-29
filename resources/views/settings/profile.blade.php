@@ -20,13 +20,21 @@
                     <div class="card-body pt-0">
                         <div class="row">
                             <div class="col-12 mb-4">
-                                <label class="form-label">Vehincle Number</label>
+                                <label class="form-label">
+                                    @if (Auth::user()->role == 'paramedic')
+                                        Vehincle Number
+                                    @endif
+                                    @if (Auth::user()->role == 'user')
+                                        Unique Identification Number
+                                    @endif
+                                </label>
                                 <div class="input-group">
                                     <input class="form-control" value="{{ Auth::user()->unique_id }}" type="text"
                                         readonly>
                                 </div>
                             </div>
                         </div>
+                        @if (Auth::user()->role == 'paramedic')
                         <div class="row">
                             <div class="col-12 mb-4">
                                 <label class="form-label">Name</label>
@@ -41,6 +49,7 @@
                                 @enderror
                             </div>
                         </div>
+                        @endif
                         <div class="row">
                             <div class="col-12">
                                 <label class="form-label mt-4">Email</label>
