@@ -25,4 +25,11 @@
         font-size: 16px;
         font-weight: 700;
     }
+    .notification-error {
+        display: block;
+        color: red;
+        letter-spacing: 2px;
+        font-size: 16px;
+        font-weight: 700;
+    }
 </style>

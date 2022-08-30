@@ -36,15 +36,19 @@ Route::match(['get', 'post'], 'paramedics', [App\Http\Controllers\Auth\RegisterC
 
 
 Route::group(['middleware' => ['auth']], function () {
+
+
     Route::group(['middleware' => ['user']], function () {
         // User
         Route::match(['get', 'post'], 'user', [App\Http\Controllers\Usercontroller::class, 'index'])->name('user');
         Route::match(['get', 'post'], 'call-details', [App\Http\Controllers\CallDetailsController::class, 'index'])->name('call-details');
     });
+
+
     Route::group(['middleware' => ['paramedic']], function () {
         // Paramedic
         Route::match(['get', 'post'], 'paramedic', [App\Http\Controllers\ParamedicsController::class, 'index'])->name('paramedic');
-        Route::match(['get'], 'add-user', [App\Http\Controllers\ParamedicsController::class, 'add_user'])->name('add-user');
+        Route::match(['get', 'post'], 'add-user', [App\Http\Controllers\ParamedicsController::class, 'add_user'])->name('add-user');
         Route::match(['get', 'post'], 'call-details', [App\Http\Controllers\ParamedicsController::class, 'call_details'])->name('call-details');
         Route::match(['get', 'post'], 'assessment', [App\Http\Controllers\ParamedicsController::class, 'assessment'])->name('assessment');
         Route::match(['get', 'post'], 'treatement', [App\Http\Controllers\ParamedicsController::class, 'treatement'])->name('treatement');
