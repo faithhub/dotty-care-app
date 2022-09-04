@@ -350,7 +350,7 @@
                                                         </div>
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Eye</label>
-                                                            <select class="form-control" name="choices-country" id="Co-Respoders">
+                                                            <select class="form-control" name="glascow_eye" id="Co-Respoders">
                                                                 <option value="Argentina">unchanged</option>
                                                                 <option value="Brasil">Improved</option>
                                                                 <option value="Brasil">Deteriorated</option>
@@ -361,14 +361,14 @@
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Verbal</label>
-                                                            <select class="form-control" name="choices-country" id="Co-Respoders">
+                                                            <select class="form-control" name="glascow_verbal" id="Co-Respoders">
                                                                     <option value="Argentina">yes</option>
                                                                     <option value="Brasil">no</option>
                                                                     </select>
                                                         </div>
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Motor</label>
-                                                            <select class="form-control" name="choices-country" id="Co-Respoders">
+                                                            <select class="form-control" name="glascow_motor" id="Co-Respoders">
                                                                     <option value="Argentina">yes</option>
                                                                     <option value="Brasil">no</option>
                                                                     </select>
@@ -378,12 +378,12 @@
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Right Pupil Size</label>
-                                                            <input class="multisteps-form__input form-control" type="number" placeholder="2.5" />
+                                                            <input class="multisteps-form__input form-control" type="number" name="right_pupil_size" placeholder="2.5" />
                                                         </div>
 
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Reactivity</label>
-                                                            <select class="form-control" name="choices-country" id="treatment rendered">
+                                                            <select class="form-control" name="reactivity" id="treatment rendered">
                                                                 <option value="Argentina">Yes</option>
                                                                 <option value="Brasil">No</option>
                                                                 <option value="Brasil">Unknown</option>
@@ -394,13 +394,13 @@
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Left Pupil Size</label>
-                                                            <input class="multisteps-form__input form-control" type="number" placeholder="3.1" />
+                                                            <input class="multisteps-form__input form-control" type="number" name="left_pupil_size" placeholder="3.1" />
                                                             </select>
                                                         </div>
 
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Reactivity</label>
-                                                            <select class="form-control" name="choices-country" id="treatment rendered">
+                                                            <select class="form-control" name="reactivity" id="treatment rendered">
                                                             <option value="Argentina">Yes</option>
                                                             <option value="Brasil">No</option>
                                                             <option value="Brasil">Unknown</option>
@@ -424,20 +424,20 @@
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input type="checkbox" value="" name="asthma" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Asthma
                                                         </label>
                                                     </div>
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckChecked">
+                                                        <input type="checkbox" value="" name="chf" id="flexCheckChecked">
                                                         <label class="form-check-label" for="flexCheckChecked">
                                                           CHF
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input type="checkbox" value="" name="diabetes" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Diabetes
                                                         </label>
@@ -447,21 +447,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="hypertension" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Hypertension
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="seizure_disorder" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Seizure Disorder
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="stroke" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Stroke
                                                         </label>
@@ -471,21 +471,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="cancer" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Cancer
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="copd" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           COPD
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="angina" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Angina
                                                         </label>
@@ -495,21 +495,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="myocardial_infraction" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Myocardial Infraction
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="renal_disease" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Renal Disease
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="psychiatric_illness" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Psychiatric illness
                                                         </label>
@@ -519,14 +519,14 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="dnr_order" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           DNR Order
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="other" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Other
                                                         </label>
@@ -534,18 +534,18 @@
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
                                                         <label></label>
-                                                        <textarea class="multisteps-form__input form-control" type="text" placeholder="Please Specify"></textarea>
+                                                        <textarea class="multisteps-form__input form-control" type="text" name="text_area" placeholder="Please Specify"></textarea>
                                                     </div>
                                                 </div>
 
                                                 <div class="row text-start">
                                                     <div class="col-6 col-md-6 ms-auto mt-3">
-                                                        <label>Allergies</label>
-                                                        <textarea class="multisteps-form__input form-control" type="text" placeholder="Technician ID"></textarea>
+                                                        <label>Allergies</label>    
+                                                        <textarea class="multisteps-form__input form-control" type="text" name="allergies" placeholder=""></textarea>
                                                     </div>
                                                     <div class="col-6 col-md-6 ms-auto mt-3">
                                                         <label>Prescription Medications</label>
-                                                        <textarea class="multisteps-form__input form-control" type="time" placeholder="Eg. Tokyo"></textarea>
+                                                        <textarea class="multisteps-form__input form-control" type="time" name="prescription_medications" placeholder=""></textarea>
                                                     </div>
 
                                                 </div>
@@ -565,8 +565,8 @@
                                                 <div class="multisteps-form__content">
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
-                                                            <label>Staus</label>
-                                                            <select class="form-control" name="choices-country" id="Co-Responders">
+                                                            <label>Status</label>
+                                                            <select class="form-control" name="status" id="Co-Responders">
                                                                 <option value="Argentina">Claer</option>
                                                                 <option value="Brasil">Completely Obstructed</option>
                                                                 <option value="Brasil">Partly Obstructed</option>
@@ -574,7 +574,7 @@
                                                         </div>
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Breathing Effort</label>
-                                                            <select class="form-control" name="choices-country" id="Co-Responders">
+                                                            <select class="form-control" name="choices-country" name="breathing_effort" id="Co-Responders">
                                                                 <option value="Argentina">Effortless</option>
                                                                 <option value="Brasil">Laboured</option>
                                                             </select>
@@ -584,7 +584,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-12 ms-auto mt-3">
                                                             <label>Volume</label>
-                                                            <select class="form-control" name="choices-country" id="Co-Respoders">
+                                                            <select class="form-control" name="volume" id="Co-Respoders">
                                                                 <option value="">Normaal</option>
                                                                 <option value="">Deep</option>
                                                                 <option value="">Shalloow</option>
@@ -596,7 +596,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Circulation</label>
-                                                            <select class="form-control" name="choices-country" id="treatment rendered">
+                                                            <select class="form-control" name="choices-country" name="circulation" id="treatment rendered">
                                                                 <option value="">Weak</option>
                                                                 <option value="">Normal</option>
                                                                 <option value="">Bounding</option>
@@ -605,7 +605,7 @@
 
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Cardiac Rhythm   </label>
-                                                            <select class="form-control" name="choices-country" id="treatment rendered">
+                                                            <select class="form-control" name="cardiac_rhythm" id="treatment rendered">
                                                                 <option value="">Yes</option>
                                                                 <option value="">No</option>
                                                                 <option value="">Unknown</option>
@@ -625,20 +625,20 @@
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="none" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           None
                                                         </label>
                                                     </div>
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckChecked">
+                                                        <input class="" type="checkbox" value="" name="bleeding" id="flexCheckChecked">
                                                         <label class="form-check-label" for="flexCheckChecked">
                                                           Bleeding
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="breathing_difficulties" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Breathing Difficulties
                                                         </label>
@@ -648,21 +648,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="diarrhea" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Diarrhea
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="fever" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Fever
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="headache" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Headache
                                                         </label>
@@ -672,21 +672,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="psychiatric" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Psychiatric
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="pain" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Pain
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="mental_status_change" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Mental Status Change
                                                         </label>
@@ -696,21 +696,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="rash"id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Rash
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="nausea" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Nausea
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="vomiting" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Vomiting
                                                         </label>
@@ -720,14 +720,14 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="wound" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Wound
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="other" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Other
                                                         </label>
@@ -735,7 +735,7 @@
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
                                                         <label></label>
-                                                        <textarea class="multisteps-form__input form-control" type="text" placeholder="Please Specify"></textarea>
+                                                        <textarea class="multisteps-form__input form-control" type="text" name="text_area" placeholder="Please Specify"></textarea>
                                                     </div>
                                                 </div>
 
@@ -773,11 +773,11 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Name Of The pre-EMS Medication</label>
-                                                            <input class="multisteps-form__input form-control" type="text" placeholder="Eg. Soft" />
+                                                        <input class="multisteps-form__input form-control" type="text" name="name_of_the_pre-ems_medication" placeholder="Eg. Soft" />
                                                         </div>
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Responce To pre-EMS Medication</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="responce_to_pre-ems_medication" id="choose-race">
                                                         <option value="Black">Unchanged</option>
                                                         <option value="White">Improved</option>
                                                         <option value="Brown">Deteriorated</option>
@@ -785,7 +785,7 @@
                                                         </div>
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Coughing</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="coughing" id="choose-race">
                                                         <option value="Black">Yes</option>
                                                         <option value="White">No</option>
                                                         </select>
@@ -796,7 +796,7 @@
                                                         <div class="row text-start">
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Tobacco</label>
-                                                                <select class="form-control col-4 col-md-3" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-3" name="tobacco" id="choose-race">
                                                             <option value="Black">Yes</option>
                                                             <option value="White">No</option>
                                                             <option value="White">Unknown</option>
@@ -804,7 +804,7 @@
                                                             </div>
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Allergen Exposure</label>
-                                                                <select class="form-control col-4 col-md-3" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-3" name="allergen_exposure" id="choose-race">
                                                             <option value="Black">Yes</option>
                                                             <option value="White">No</option>
                                                             <option value="White">Unknown</option>
@@ -817,7 +817,7 @@
                                                         <div class="row text-start">
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Level Of Distress</label>
-                                                                <select class="form-control col-4 col-md-3" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-3" name="level_of_distress" id="choose-race">
                                                             <option value="Black">Mild</option>
                                                             <option value="White">Moderate</option>
                                                             <option value="White">Severe</option>
@@ -825,7 +825,7 @@
                                                             </div>
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Allergen Exposure</label>
-                                                                <select class="form-control col-4 col-md-3" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-3" name="allergen_exposure" id="choose-race">
                                                             <option value="Black">Yes</option>
                                                             <option value="White">No</option>
                                                             <option value="White">Unknown</option>
@@ -907,7 +907,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Nature of Exposure</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="nature_of_exposure" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -915,7 +915,7 @@
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Type Of Substance</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="type_of_substance" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -923,7 +923,7 @@
                                                         </div>
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Route Of Entry</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="route_of_entry" id="choose-race">
                                                             <option value="Black">Yes</option>
                                                             <option value="White">No</option>
                                                         </select>
@@ -933,7 +933,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Type Of Reaction To Substance</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="type_of_reaction_to_substance" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -941,7 +941,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Evidence Of Substance</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="evidence_of_substance" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -954,12 +954,12 @@
                                                         <div class="row text-start">
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Amount Of Substance</label>
-                                                                <input class="multisteps-form__input form-control" type="number" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" type="number" name="amount_of_substance" placeholder="Eg. Soft" />
 
                                                             </div>
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Time Of Initial Exposure</label>
-                                                                <input class="multisteps-form__input form-control" type="number" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" type="number" name="time_of_initial_exposure" placeholder="Eg. Soft" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -983,7 +983,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Arrest Classification</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="arrest_classification" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -991,7 +991,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Witness Of Arrest</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="witness_of_arrest" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1003,17 +1003,17 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Time of First CPR</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" name="time_of_first_cpr"type="time" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Time Of Crew CPR</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" name="time_of_crew_cpr" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>First Of First Defib</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" name="first_of_first_defib" placeholder="Eg. Soft" />
                                                         </div>
 
                                                     </div>
