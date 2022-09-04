@@ -71,18 +71,18 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Date of Injury</label>
-                                                    <input class="multisteps-form__input form-control" type="date" placeholder="" />
+                                                    <input class="multisteps-form__input form-control" type="date" name="date_of_injury" placeholder="" />
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Time Of Injury</label>
-                                                    <input class="multisteps-form__input form-control" type="time" placeholder="" />
+                                                    <input class="multisteps-form__input form-control" type="time" name="time_of_injury" placeholder="" />
                                                 </div>
                                             </div>
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Co-Respoders</label>
-                                                    <select class="form-control" name="choices-country" id="Co-Respoders">
+                                                    <select class="form-control" name="co_responders" id="Co-Respoders">
                                                         <option value="">select</option>
                                                         <option value="">Law Enforcement</option>
                                                         <option value="">Fire</option>
@@ -92,7 +92,7 @@
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Treatment Rendered</label>
-                                                    <select class="form-control" name="choices-country" id="treatment rendered">
+                                                    <select class="form-control" name="treatment_rendered" id="treatment rendered">
                                                         <option value="">Yes</option>
                                                         <option value="">No</option>
                                                         </select>
@@ -102,7 +102,7 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Patient Condition At Destination</label>
-                                                    <select class="form-control" name="choices-country" id="choices-country">
+                                                    <select class="form-control" name="patient_condition_at_destination" id="choices-country">
                                                         <option value="">Select</option>
                                                         <option value="">Stable</option>
                                                         <option value="">Improved</option>
@@ -112,7 +112,7 @@
 
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Patient Displacement</label>
-                                                    <select class="form-control" name="choices-country" id="choices-country">
+                                                    <select class="form-control" name="patient_displacement" id="choices-country">
                                                         <option value="">Yes</option>
                                                         <option value="">No</option>
                                                         </select>
@@ -122,7 +122,7 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Suspected Intoxication</label>
-                                                    <select class="form-control" name="choices-country" id="choices-country">
+                                                    <select class="form-control" name="suspected_intoxication" id="choices-country">
                                                         <option value="">Select</option>
                                                         <option value="">Yes as reported by patient</option>
                                                         <option value="">Yes as reported by bystander</option>
@@ -132,7 +132,7 @@
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Chief Complaint</label>
-                                                    <input class="multisteps-form__input form-control" type="text" placeholder="" />
+                                                    <input class="multisteps-form__input form-control" type="text" name="chief_complaint" placeholder="" />
                                                 </div>
                                             </div>
 
@@ -166,20 +166,20 @@
                                                 <div class="row">
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" name="normal" value="" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Normal
                                                         </label>
                                                     </div>
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckChecked">
+                                                        <input class="" type="checkbox" value="" name="confused" id="flexCheckChecked">
                                                         <label class="form-check-label" for="flexCheckChecked">
                                                           Confused
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="combative" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Combative
                                                         </label>
@@ -189,21 +189,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="dysphasia" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Dysphasia
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="hallucinations" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Hallucinations
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="seizures" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Seizures
                                                         </label>
@@ -213,21 +213,21 @@
                                                 <div class="row">
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="lethargic" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Lethargic
                                                         </label>
                                                     </div>
 
                                                     <div class="col-6 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="tremors" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Tremors
                                                         </label>
                                                     </div>
 
                                                     <div class="col-12 col-md-4 ms-auto mt-6">
-                                                        <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="" type="checkbox" value="" name="others" id="flexCheckDefault">
                                                         <label class="form-check-label" for="flexCheckDefault">
                                                           Others
                                                         </label>
@@ -240,7 +240,7 @@
 
                                                     <div class="col-12 col-md-12 ms-auto mt-3">
                                                         <label></label>
-                                                        <textarea class="multisteps-form__input form-control" type="text" placeholder="Specify Other"></textarea>
+                                                        <textarea class="multisteps-form__input form-control" type="text" name="text_area" placeholder="Specify Other"></textarea>
                                                     </div>
                                                 </div>
 
@@ -261,20 +261,20 @@
                                                     <div class="row">
 
                                                         <div class="col-12 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="cardiovascular" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Cardiovascular
                                                             </label>
                                                         </div>
                                                         <div class="col-12 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckChecked">
+                                                            <input class="" type="checkbox" value="" name="central_nervous_system" id="flexCheckChecked">
                                                             <label class="form-check-label" for="flexCheckChecked">
                                                               Central Nervous Syetem
                                                             </label>
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="endocrine" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Endocrine
                                                             </label>
@@ -284,21 +284,21 @@
                                                     <div class="row">
 
                                                         <div class="col-6 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="gi" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               GI
                                                             </label>
                                                         </div>
 
                                                         <div class="col-6 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="musculoskeletal" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Musculoskeletal
                                                             </label>
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="integumentary" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Integumentary
                                                             </label>
@@ -308,21 +308,21 @@
                                                     <div class="row">
 
                                                         <div class="col-6 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="reproductive" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Reproductive
                                                             </label>
                                                         </div>
 
                                                         <div class="col-6 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="respiratory" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Respiratory
                                                             </label>
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-6">
-                                                            <input class="" type="checkbox" value="" id="flexCheckDefault">
+                                                            <input class="" type="checkbox" value="" name="renal" id="flexCheckDefault">
                                                             <label class="form-check-label" for="flexCheckDefault">
                                                               Renal
                                                             </label>
@@ -346,7 +346,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Time Of Asseessment</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" name="time_of_assessment" type="time" placeholder="Eg. Soft" />
                                                         </div>
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Eye</label>
