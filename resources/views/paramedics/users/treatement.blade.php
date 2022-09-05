@@ -64,11 +64,11 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Procedure Start Time</label>
-                                                    <input class="multisteps-form__input form-control" type="time" placeholder="Start time" />
+                                                    <input class="multisteps-form__input form-control" name="procedure_start_time" type="time" placeholder="Start time" />
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Type of procedure</label>
-                                                    <select class="form-control" name="choices-country" id="choices">
+                                                    <select class="form-control" name="type_of_procedure" id="choices">
                                                         <option value="">None</option>
                                                         <option value="">Airway cleared</option>
                                                         <option value="">Airway patency maintained</option>
@@ -91,11 +91,11 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Treatment End Time</label>
-                                                    <input class="multisteps-form__input form-control" type="time" placeholder="End time" />
+                                                    <input class="multisteps-form__input form-control" name="treatment_end_time" type="time" placeholder="End time" />
                                                 </div>
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Device / Method</label>
-                                                    <select class="form-control" name="choices-country" id="choices">
+                                                    <select class="form-control" name="choices-country" name="device_method" id="choices">
                                                         <option value=""></option>
                                                         <option value=""></option>
                                                         <option value=""></option>
@@ -109,11 +109,11 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
                                                     <label>Technician ID</label>
-                                                    <input class="multisteps-form__input form-control" type="text" placeholder="" />
+                                                    <input class="multisteps-form__input form-control" name="technician_id" type="text" placeholder="" />
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
                                                     <label>Device Size</label>
-                                                    <select class="form-control" name="choices-country" id="choices-country">
+                                                    <select class="form-control" name="device_size" id="choices-country">
                                                         <option value=""></option>
                                                         <option value=""></option>
                                                         <option value=""></option>
@@ -122,7 +122,7 @@
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
                                                     <label>Outcome</label>
-                                                    <select class="form-control" name="choices-country" id="choices-country">
+                                                    <select class="form-control" name="outcome" id="choices-country">
                                                         <option value="">Stable</option>
                                                         <option value="">Improved</option>
                                                         <option value="">Deteriorated</option>
@@ -130,7 +130,7 @@
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
                                                     <label>Successful</label>
-                                                    <select class="form-control" name="choices-country" id="choices-country">
+                                                    <select class="form-control" name="successful" id="choices-country">
                                                     <option value="">yes</option>
                                                     <option value="">No</option> 
                                                 </select>
@@ -140,26 +140,26 @@
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-3 ms-auto mt-2">
                                                     <label>Treatment</label>
-                                                    <input class="multisteps-form__input form-control" type="text" placeholder="Technician ID" />
+                                                    <input class="multisteps-form__input form-control" name="treatment" type="text" placeholder="Technician ID" />
                                                 </div>
                                                 <div class="col-6 col-md-3 ms-auto mt-2">
                                                     <label>Total Time</label>
-                                                    <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Tokyo" />
+                                                    <input class="multisteps-form__input form-control" type="total_time" placeholder="Eg. Tokyo" />
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
                                                     <label></label>
-                                                    <input class="multisteps-form__input form-control" type="text" placeholder="Dosage" />
+                                                    <input class="multisteps-form__input form-control" type="dosage" placeholder="Dosage" />
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
                                                     <label></label>
-                                                    <input class="multisteps-form__input form-control" type="text" placeholder="Amount Unit" />
+                                                    <input class="multisteps-form__input form-control" type="amount_unit" placeholder="Amount Unit" />
                                                 </div>
                                             </div>
 
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Type Of Treatment</label>
-                                                    <select class="form-control" name="choices-country" id="choices">
+                                                    <select class="form-control" name="type_of_treatment" id="choices">
                                                         <option value="">Medication</option>
                                                         <option value="">IV Fluid</option>
                                                         <option value="">Oxygen</option>
@@ -169,7 +169,7 @@
                                                 </div>
                                                 <div class="col-12 col-md-6 ms-auto mt-3">
                                                     <label>Administration Route</label>
-                                                    <select class="form-control" name="choices-country" id="choices">
+                                                    <select class="form-control" name="administration_route" id="choices">
                                                     <option value=""></option>
                                                     <option value=""></option>
                                                     <option value=""></option>
@@ -198,12 +198,12 @@
                                             <div class="row text-start">
                                                 <div class="col-12 col-md-6 ms-auto mt-3">
                                                     <label>Time Of Assessment</label>
-                                                    <input class="multisteps-form__input form-control" type="time" placeholder="Time Of Assessment" />
+                                                    <input class="multisteps-form__input form-control" type="time" name="time_of_assessment" placeholder="Time Of Assessment" />
                                                 </div>
 
                                                 <div class="col-12 col-md-6 ms-auto mt-3">
                                                     <label>Level of Consciousness</label>
-                                                    <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                    <select class="form-control col-4 col-md-2" name="level_of_consciousness" id="choose-race">
                                                     <option value="">select</option>
                                                     <option value="">Verbal</option>
                                                     <option value="">Alert</option>
@@ -217,11 +217,11 @@
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
                                                         <label>Pulse Rate</label>
-                                                        <input class="multisteps-form__input form-control" type="number" placeholder="Pulse Rate" />
+                                                        <input class="multisteps-form__input form-control" name="pulse_rate" type="number" placeholder="Pulse Rate" />
                                                     </div>
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
                                                         <label>Site Of Pulse Check</label>
-                                                        <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                        <select class="form-control col-4 col-md-2" name="site_of_pulse_check" id="choose-race">
                                                         <option value="">select</option>
                                                         <option value="">Radial</option>
                                                         <option value="">Brachial</option>
@@ -238,8 +238,8 @@
                                             <div class="multisteps-form__content">
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
-                                                        <label>Temprature</label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Temperature" />
+                                                        <label>Temperature</label>
+                                                        <input class="multisteps-form__input form-control" name="temperature" type="text" placeholder="Temperature" />
                                                     </div>
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
                                                         <label>Site Of Temperature Check</label>
@@ -258,7 +258,7 @@
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-4 ms-auto mt-3">
                                                         <label>Skin Color</label>
-                                                        <select class="form-control col-4 col-md-2" name="choose-race" id="skincolor">
+                                                        <select class="form-control col-4 col-md-2" name="skin_color" id="skincolor">
                                                             <option value="">select</option>
                                                             <option value="">Normal</option>
                                                             <option value="">Pale</option>
@@ -268,7 +268,7 @@
 
                                                     <div class="col-12 col-md-4 ms-auto mt-3">
                                                         <label>Temperature</label>
-                                                        <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                        <select class="form-control col-4 col-md-2" name="temperaturee" id="choose-race">
                                                             <option value="">select</option>
                                                             <option value="">Normal</option>
                                                             <option value="">Warm</option>
@@ -277,7 +277,7 @@
                                                     </div>
                                                     <div class="col-12 col-md-4 ms-auto mt-3">
                                                         <label>Moisture</label>
-                                                        <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                        <select class="form-control col-4 col-md-2" name="moisture" id="choose-race">
                                                             <option value="">select</option>
                                                             <option value="">Moist</option>
                                                             <option value="">Dry</option>
@@ -291,11 +291,11 @@
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-6 ms-auto mt-2">
                                                         <label>Blood Pressure</label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Systolic" />
+                                                        <input class="multisteps-form__input form-control" type="systolic" placeholder="Systolic" />
                                                     </div>
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
                                                         <label> </label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Diastolic" />
+                                                        <input class="multisteps-form__input form-control" name="diastolic" type="text" placeholder="Diastolic" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -304,11 +304,11 @@
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-6 ms-auto mt-2">
                                                         <label>Respiration</label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Respiration" />
+                                                        <input class="multisteps-form__input form-control" type="text" name="respiration" placeholder="Respiration" />
                                                     </div>
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
                                                         <label>Blood Glucose</label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Blood Glucose" />
+                                                        <input class="multisteps-form__input form-control" type="text" name="blood_glucose" placeholder="Blood Glucose" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -317,11 +317,11 @@
                                                 <div class="row text-start">
                                                     <div class="col-12 col-md-6 ms-auto mt-2">
                                                         <label>Oxygen Saturation</label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Pre-Oxygen" />
+                                                        <input class="multisteps-form__input form-control" type="text" name="pre_oxygen" placeholder="Pre-Oxygen" />
                                                     </div>
                                                     <div class="col-12 col-md-6 ms-auto mt-3">
                                                         <label></label>
-                                                        <input class="multisteps-form__input form-control" type="text" placeholder="Post-Oxygen" />
+                                                        <input class="multisteps-form__input form-control" name="post_oxygen" type="text" placeholder="Post-Oxygen" />
                                                     </div>
                                                 </div>
                                             </div>
