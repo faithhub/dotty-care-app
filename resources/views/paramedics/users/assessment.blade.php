@@ -1003,7 +1003,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Time of First CPR</label>
-                                                            <input class="multisteps-form__input form-control" name="time_of_first_cpr"type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" name="time_of_first_cpr" type="time" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
@@ -1021,7 +1021,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Deribrillation prior to Ambulance Arrival</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="deribrillation_prior-to_ambulance_arrival" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1030,12 +1030,12 @@
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Number Of Defib Prior EMS</label>
-                                                            <input class="multisteps-form__input form-control" type="text" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" text="number_of_defib_paior_ems" type="text" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Time Of CRP Discount</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" time="time_of_crp_discount" placeholder="Eg. Soft" />
                                                         </div>
                                                     </div>
 
@@ -1043,16 +1043,16 @@
                                                         <div class="row text-start">
                                                             <div class="col-6 col-md-4 ms-auto mt-3">
                                                                 <label>Spont Circulation</label>
-                                                                <input class="multisteps-form__input form-control" type="text" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" type="text" name="spont_circular" placeholder="Eg. Soft" />
                                                                 </select>
                                                             </div>
                                                             <div class="col-6 col-md-4 ms-auto mt-3">
                                                                 <label>Spont Respiration</label>
-                                                                <input class="multisteps-form__input form-control" type="text" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" type="text" name="spont_respiration" placeholder="Eg. Soft" />
                                                             </div>
                                                             <div class="col-6 col-md-4 ms-auto mt-3">
                                                                 <label>Pulse Rate At Destin</label>
-                                                                <input class="multisteps-form__input form-control" type="text" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" type="text" name="pulse_rate_at_destin" placeholder="Eg. Soft" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1060,7 +1060,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Type Of Ambulance Defibrillatot</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="types+of_ambulance_deribrillator" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1068,7 +1068,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Reason CPR Disconti. in the field</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="reason_cpr_discount" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1079,7 +1079,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Reason Not Initating CPR</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="reason_not_initating_cpr" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1088,7 +1088,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Peacemaker / impplant Defib</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="peacemaker_impplant_defib" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1115,12 +1115,12 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Pain Severity</label>
-                                                            <input class="multisteps-form__input form-control" type="number" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="number" name="pain_severity" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Name Of The Pre-EMS Medication</label>
-                                                            <input class="multisteps-form__input form-control" type="text" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="text" name="name_of_the_pre_ems_medication" placeholder="Eg. Soft" />
                                                         </div>
 
                                                     </div>
@@ -1128,7 +1128,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Medication Administered</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="medication_administered" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1144,7 +1144,7 @@
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Type Of Pain</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="type_of_pain" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1156,7 +1156,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Source Of Pain</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="source_pain" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1164,7 +1164,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Pain Radiation Site</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="pain_reduction_site" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1175,7 +1175,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>State At Onset</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="state_at_onset" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1184,7 +1184,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Pacemaker / Implanted Defibrillator</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="pacemaker_implanted_defibrillator" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1210,7 +1210,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-12 ms-auto mt-3">
                                                             <label>Infant Time Of Breathing</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" name="infant_time_of_breathing" placeholder="Eg. Soft" />
                                                         </div>
                                                     </div>
 
@@ -1218,7 +1218,7 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <div class="d-flex justify-content-center">1 MUNITES</div>
                                                             <label>Heart Rate</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="heart_rate " id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1227,7 +1227,7 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <div class="d-flex justify-content-center">5 MUNITES</div>
                                                             <label>Heart Rate</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="heart_rate" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1239,7 +1239,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Respiratory Effort</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="respiratory_effort" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1247,7 +1247,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Respiratory Effort</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="respiratory_effortt" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1258,7 +1258,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Muscle Tone</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="muscle_tone" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1267,7 +1267,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Muscle Tone</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="muscle_tone" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1278,7 +1278,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Reflax Irritability</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="reflax_irritability" id="chose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1287,7 +1287,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Reflax Irritability</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="reflax_irritabilityy" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1298,7 +1298,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Colour</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="colour" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1307,7 +1307,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Colour</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="colours" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1333,17 +1333,17 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Parity</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" name="parity" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Gravidity</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" name="gravidity" placeholder="Eg. Soft" />
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Gestation Stage</label>
-                                                            <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                            <input class="multisteps-form__input form-control" type="time" name="gestation_stage" placeholder="Eg. Soft" />
                                                         </div>
 
                                                     </div>
@@ -1351,7 +1351,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Delivery</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="delivery" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1360,7 +1360,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Baby Presentation</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="baby_presentation" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1372,12 +1372,12 @@
                                                         <div class="row text-start">
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Time Of Birth</label>
-                                                                <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" name="time_of_birth" type="time" placeholder="Eg. Soft" />
                                                                 </select>
                                                             </div>
                                                             <div class="col-6 col-md-6 ms-auto mt-3">
                                                                 <label>Time Of Placenta Delivery</label>
-                                                                <input class="multisteps-form__input form-control" type="time" placeholder="Eg. Soft" />
+                                                                <input class="multisteps-form__input form-control" name="time)of_placenta_delivery" type="time" placeholder="Eg. Soft" />
                                                             </div>
 
                                                         </div>
@@ -1401,7 +1401,7 @@
                                                     <div class="row text-start">
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Work Related</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="work_related" id="choose-race">
                                                                 <option value="Black">Yes</option>
                                                                 <option value="White">No</option>
                                                             </select>
@@ -1409,7 +1409,7 @@
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Cause Of  Injury</label>
-                                                            <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                            <select class="form-control col-4 col-md-2" name="cause_of_injury" id="choose-race">
                                                                 <option value="Black">Unchanged</option>
                                                                 <option value="White">Improved</option>
                                                                 <option value="Brown">Deteriorated</option>
@@ -1421,7 +1421,7 @@
                                                         <div class="row text-start">
                                                             <div class="col-12 col-md-4 ms-auto mt-3">
                                                                 <label>Human Factor</label>
-                                                                <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-2" name="human_factor" id="choose-race">
                                                                     <option value="Black">Unchanged</option>
                                                                     <option value="White">Improved</option>
                                                                     <option value="Brown">Deteriorated</option>
@@ -1430,7 +1430,7 @@
 
                                                             <div class="col-12 col-md-4 ms-auto mt-3">
                                                                 <label>Nature Of  Resulting Injury</label>
-                                                                <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-2" name="nature_of_resulting_injury" id="choose-race">
                                                                     <option value="Black">Unchanged</option>
                                                                     <option value="White">Improved</option>
                                                                     <option value="Brown">Deteriorated</option>
@@ -1439,7 +1439,7 @@
 
                                                             <div class="col-12 col-md-4 ms-auto mt-3">
                                                                 <label>Safey Protective Equipment</label>
-                                                                <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
+                                                                <select class="form-control col-4 col-md-2" name="safty_protective_equipment" id="choose-race">
                                                                     <option value="Black">Unchanged</option>
                                                                     <option value="White">Improved</option>
                                                                     <option value="Brown">Deteriorated</option>
