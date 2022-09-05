@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#authExamples" class="nav-link" aria-controls="authExamples" role="button"
+                    <a href="{{ route('report') }}" class="nav-link {{ request()->is('user-call-report') ? 'active' : '' }}" aria-controls="authExamples" role="button"
                         aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">

@@ -2,43 +2,7 @@
 @section('content')
     <div class="row mb-5">
         <div class="col-lg-3">
-            <div class="card position-sticky top-1">
-                <ul class="nav flex-column bg-white border-radius-lg p-3">
-                    <li class="nav-item mb-2 {{ request()->is('add-user') ? 'nav-item-active' : '' }}">
-                        <a class="nav-link text-body d-flex align-items-center" href="{{ route('add-user') }}">
-                            <i class="ni ni-single-02 me-2 text-dark opacity-6"></i>
-                            <span class="text-sm">Add New User</span>
-                        </a>
-                    <li class="nav-item mb-2 {{ request()->is('call-details') ? 'nav-item-active' : '' }}">
-                        <a class="nav-link text-body d-flex align-items-center"
-                            href="{{ route('call-details') }}">
-                            <i class="ni ni-ui-04 me-2 text-dark opacity-6"></i>
-                            <span class="text-sm">Call Details</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mb-2 {{ request()->is('assessment') ? 'nav-item-active' : '' }}">
-                        <a class="nav-link text-body d-flex align-items-center"
-                            href="{{ route('assessment') }}">
-                            <i class="ni ni-paper-diploma me-2 text-dark opacity-6"></i>
-                            <span class="text-sm">Assessment</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mb-2 {{ request()->is('treatment') ? 'nav-item-active' : '' }}">
-                        <a class="nav-link text-body d-flex align-items-center"
-                            href="{{ route('treatment') }}">
-                            <i class="ni ni-spaceship me-2 text-dark opacity-6"></i>
-                            <span class="text-sm">Treatment</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mb-2 {{ request()->is('call-report') ? 'nav-item-active' : '' }}">
-                        <a class="nav-link text-body d-flex align-items-center"
-                            href="{{ route('call-report') }}">
-                            <i class="ni ni-collection me-2 text-dark opacity-6"></i>
-                            <span class="text-sm">Call Report</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            @include('layouts.includes.user-nav')
         </div>
         <div class="col-lg-9 mt-lg-0 mt-4">
             <div class="row container">
@@ -97,12 +61,10 @@
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
                                                     <label>Device / Method</label>
                                                     <select class="form-control" name="choices-country" name="device_method" id="choices">
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
+                                                        <option value="Test">Test</option>
+                                                        <option value="New">New</option>
+                                                        <option value="Fo">Fo</option>
+                                                        <option value="Co">Co</option>
                                                         </select>
                                                 </div>
                                             </div>
@@ -115,10 +77,10 @@
                                                 <div class="col-6 col-md-3 ms-auto mt-3">
                                                     <label>Device Size</label>
                                                     <select class="form-control" name="device_size" id="choices-country">
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                        <option value=""></option> 
+                                                        <option value="Test">Test</option>
+                                                        <option value="New">New</option>
+                                                        <option value="Fo">Fo</option>
+                                                        <option value="Co">Co</option> 
                                                     </select>
                                                 </div>
                                                 <div class="col-12 col-md-3 ms-auto mt-3">
@@ -171,12 +133,10 @@
                                                 <div class="col-12 col-md-6 ms-auto mt-3">
                                                     <label>Administration Route</label>
                                                     <select class="form-control" name="administration_route" id="choices">
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value=""></option>
+                                                        <option value="Test">Test</option>
+                                                        <option value="New">New</option>
+                                                        <option value="Fo">Fo</option>
+                                                        <option value="Co">Co</option> 
                                                 </select>
                                                 </div>
                                             </div>

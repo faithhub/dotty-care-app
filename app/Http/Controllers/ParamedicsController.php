@@ -20,7 +20,7 @@ class ParamedicsController extends Controller
         $this->middleware('auth');
     }
 
-    
+
     public function index()
     {
         $data['title'] = "Paramedics";
@@ -57,6 +57,13 @@ class ParamedicsController extends Controller
                 return back();
             }
 
+            $data['get_user_data'] = $get_user_data = UserData::where('user_id', $user->id)->first();
+
+            if ($get_user_data->is_filled) {
+                Session::flash(__('error'), __('The user data has already been filled'));
+                return back();
+            }
+
             Session::put('user_data_id', $user->id);
             Session::put('user_data_email', $user->email);
             Session::put('user_data_unique_id', $user->unique_id);
@@ -69,7 +76,6 @@ class ParamedicsController extends Controller
     public function call_details(Request $request)
     {
         if ($_POST) {
-            // dd($request->all());
             $data = $request->except(['_token']);
             $user_id = Session::get('user_data_id');
 
@@ -89,7 +95,7 @@ class ParamedicsController extends Controller
             $user = UserData::where('user_id', $user_id)->first();
             if ($user) {
                 DB::table('user_data')
-                ->where('user_id', $user_id)
+                    ->where('user_id', $user_id)
                     ->update(
                         [
                         'paramedic_id' => Auth::user()->id, 'user_id' => $user_id, 'call_details' => $data, 'is_call_details_filled' =>  true
@@ -121,7 +127,7 @@ class ParamedicsController extends Controller
             $user = UserData::where('user_id', $user_id)->first();
             if ($user) {
                 DB::table('user_data')
-                ->where('user_id', $user_id)
+                    ->where('user_id', $user_id)
                     ->update(
                         [
                             'paramedic_id' => Auth::user()->id, 'user_id' => $user_id, 'assessment' => $data, 'is_assessment_filled' =>  true
@@ -132,28 +138,6 @@ class ParamedicsController extends Controller
             }
             return redirect()->route('treatment');
         }
-        // $user_id = Session::get('user_data_id');
-        // $user = UserData::where('user_id', $user_id)->select('call_details', 'assessment')->get();
-        // $json1 = json_encode($user[0]->call_details);
-        // $json2 = json_encode($user[0]->assessment);
-        // $json = (object)array_merge((array) json_decode($json1), (array) json_decode($json2));
-
-        // $fileName = time() . '_user_data.json';
-        // $path = public_path('/upload/json/');
-        // if (!File::exists($path)) {
-        //     // path does not exist
-        //     File::makeDirectory($path, 0777, true, true);
-        // }
-
-        // File::put(public_path('/upload/json/' . $fileName), json_encode($json));
-        // DB::table('user_data')
-        // ->where('user_id', $user_id)
-        //     ->update(
-        //         [
-        //             'file' =>  $fileName
-        //         ]
-        //     );
-
 
         $data['title'] = "User Assessment";
         return view('paramedics.users.assessment');
@@ -168,7 +152,7 @@ class ParamedicsController extends Controller
             $user = UserData::where('user_id', $user_id)->first();
             if ($user) {
                 DB::table('user_data')
-                ->where('user_id', $user_id)
+                    ->where('user_id', $user_id)
                     ->update(
                         [
                             'paramedic_id' => Auth::user()->id, 'user_id' => $user_id, 'treatment' => $data, 'is_treatment_filled' =>  true
@@ -182,40 +166,98 @@ class ParamedicsController extends Controller
         $data['title'] = "User Treatment";
         return view('paramedics.users.treatment');
     }
+
     public function call_report()
     {
-        $data['title'] = "User Call Report";
-        $user_id = Session::get('user_data_id');
-        $user_data = UserData::where('user_id', $user_id)->first();
-        $data['call_details'] = $user_data->call_details;
-        $data['assessment'] = $user_data->assessment;
-        $data['treatment'] = $user_data->treatment;
-        return view('paramedics.users.call-report', $data);
+        try {
+            $data['title'] = "User Call Report";
+            $user_id = Session::get('user_data_id');
+            $data['user_data'] = $user_data = UserData::where('user_id', $user_id)->first();
+            $data['call_details'] = $user_data->call_details;
+            $data['assessment'] = $user_data->assessment;
+            $data['treatment'] = $user_data->treatment;
+            return view('paramedics.users.call-report', $data);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
-    public function download_json()
+    public function save_report()
     {
         $user_id = Session::get('user_data_id');
         $user_data = UserData::where('user_id', $user_id)->first();
-        $data['call_details'] = $user_data->call_details;
-        $data['is_call_details_filled'] = $user_data->is_call_details_filled;
-        // $user = CallDetails::where('user_id', $user_id)->select('data', 'created_at')->get();
-        // $json1 = json_encode($user[0]->is_call_details_filled);
+        if (!$user_data) {
+            return redirect()->route('add-user');
+        }
+        if (!$user_data->is_call_details_filled) {
+            return redirect()->route('call-details');
+        }
+        if (!$user_data->is_assessment_filled) {
+            return redirect()->route('assessment');
+        }
+        if (!$user_data->is_treatment_filled) {
+            return redirect()->route('treatment');
+        }
 
-        $user_data = CallDetails::where('user_id', $user_id)->first();
+        DB::table('user_data')
+        ->where('user_id', $user_id)
+            ->update(
+                [
+                    'is_filled' => true,
+                ]
+            );
+
+        # code...
+        Session::forget('user_data_id');
+        Session::forget('user_data_email');
+        Session::forget('user_data_unique_id');
+        Session::flash("success", "Record saved successfully");
+        Session::flash('saved', true);
+        $this->json_report();
+        return redirect()->route('add-user');
+    }
+
+    public function json_report()
+    {
+        $user_id = Session::get('user_data_id');
+        $user_data = UserData::where('user_id', $user_id)->first();
+        if (!$user_data) {
+            return redirect()->route('add-user');
+        }
+        if (!$user_data->is_call_details_filled) {
+            return redirect()->route('call-details');
+        }
+        if (!$user_data->is_assessment_filled) {
+            return redirect()->route('assessment');
+        }
+        if (!$user_data->is_treatment_filled) {
+            return redirect()->route('treatment');
+        }
+
+        $user = UserData::where('user_id', $user_id)->select('call_details', 'assessment', 'treatment')->get();
+        $call_details = json_encode($user[0]->call_details);
+        $assessment = json_encode($user[0]->assessment);
+        $treatment = json_encode($user[0]->treatment);
+        $json = (object)array_merge((array) json_decode($call_details), (array) json_decode($assessment), (array) json_decode($treatment));
+
         $fileName = time() . '_user_data.json';
         $path = public_path('/upload/json/');
         if (!File::exists($path)) {
             // path does not exist
             File::makeDirectory($path, 0777, true, true);
         }
-        $json = json_encode($user_data->data) . json_encode($user_data->data);
-        File::put(public_path('/upload/json/' . $fileName), $json);
 
-        Session::flash(__('success'), __('Profile updated successfully'));
+        File::put(public_path('/upload/json/' . $fileName), json_encode($json));
+        DB::table('user_data')
+        ->where('user_id', $user_id)
+            ->update(
+                [
+                    'file' =>  $fileName
+                ]
+            );
     }
+
     public function download_pdf()
     {
-
     }
 }
