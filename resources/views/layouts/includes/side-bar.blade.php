@@ -71,7 +71,7 @@
 
                 <li class="nav-item">
                     <a href="{{ route('add-user') }}"
-                        class="nav-link {{ request()->is('call-details') || request()->is('add-user') || request()->is('assessment') || request()->is('treatement') || request()->is('call-report') ? 'active' : '' }}"
+                        class="nav-link {{ request()->is('call-details') || request()->is('add-user') || request()->is('assessment') || request()->is('treatment') || request()->is('call-report') ? 'active' : '' }}"
                         aria-controls="pagesExamples" role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">

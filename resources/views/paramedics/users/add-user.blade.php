@@ -21,8 +21,8 @@
                             <span class="text-sm">Assessment</span>
                         </a>
                     </li>
-                    <li class="nav-item mb-2 {{ request()->is('treatement') ? 'nav-item-active' : '' }}">
-                        <a class="nav-link text-body d-flex align-items-center" href="{{ route('treatement') }}">
+                    <li class="nav-item mb-2 {{ request()->is('treatment') ? 'nav-item-active' : '' }}">
+                        <a class="nav-link text-body d-flex align-items-center" href="{{ route('treatment') }}">
                             <i class="ni ni-spaceship me-2 text-dark opacity-6"></i>
                             <span class="text-sm">Treatment</span>
                         </a>
@@ -76,6 +76,11 @@
                                     <div class="text-right mb-3 mt-4">
                                         <a class="btn bg-gradient-dark ms-auto mb-0" href="{{ route('call-details') }}">
                                             Proceed
+                                        </a>
+                                    </div>
+                                    <div class="text-left mb-3 mt-4">
+                                        <a class="btn bg-gradient-dark ms-auto mb-0" href="{{ route('delete-session') }}">
+                                            End Session
                                         </a>
                                     </div>
                                 @else

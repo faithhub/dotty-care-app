@@ -23,9 +23,9 @@
                             <span class="text-sm">Assessment</span>
                         </a>
                     </li>
-                    <li class="nav-item mb-2 {{ request()->is('treatement') ? 'nav-item-active' : '' }}">
+                    <li class="nav-item mb-2 {{ request()->is('treatment') ? 'nav-item-active' : '' }}">
                         <a class="nav-link text-body d-flex align-items-center"
-                            href="{{ route('treatement') }}">
+                            href="{{ route('treatment') }}">
                             <i class="ni ni-spaceship me-2 text-dark opacity-6"></i>
                             <span class="text-sm">Treatment</span>
                         </a>
@@ -62,7 +62,8 @@
 
                         <div class="row">
                             <div class="col-12 col-lg-12 m-auto">
-                                <form class="multisteps-form__form">
+                                <form class="multisteps-form__form" method="POST" action="">
+                                    @csrf
                                     <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
                                         <div class="row text-center">
 
@@ -1454,8 +1455,8 @@
                                                             <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">
                                                             Prev
                                                         </button>
-                                                            <button class="btn bg-gradient-dark ms-auto mb-0" type="button" title="Send">
-                                                            Send
+                                                            <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Submit">
+                                                            Submit
                                                         </button>
                                                         </div>
                                                     </div>
@@ -1463,8 +1464,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </form>
                             </div>
                         </div>
@@ -1474,4 +1473,24 @@
 
         </div>
     </div>
+
+    <script>
+        // Get Object literal from LocalStorage
+        let memory = JSON.parse(localStorage.memory || "{}");
+
+        // Loop input elements on page
+        [...document.querySelectorAll('input, textarea')].forEach(el => {
+
+            // prepopulate from memory
+            if (el.name in memory) {
+                el.value = memory[el.name]
+            }
+
+            // save to memory
+            el.addEventListener("input", () => {
+                memory[el.name] = el.value;
+                localStorage.memory = JSON.stringify(memory);
+            });
+        });
+    </script>
 @endsection

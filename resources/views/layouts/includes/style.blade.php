@@ -32,4 +32,10 @@
         font-size: 16px;
         font-weight: 700;
     }
+    /* .nav.nav-pills .nav-link{
+        z-index:3 !important;
+        color:#344767 !important;
+        border-radius:0.5rem !important;
+        background-color:inherit !important
+    } */
 </style>
