@@ -59,6 +59,12 @@ class ParamedicsController extends Controller
 
             $data['get_user_data'] = $get_user_data = UserData::where('user_id', $user->id)->first();
 
+            if (!$get_user_data) {
+                UserData::create(['paramedic_id' => Auth::user()->id, 'user_id' => $user->id]);
+            }
+
+            $data['get_user_data'] = $get_user_data = UserData::where('user_id', $user->id)->first();
+
             if ($get_user_data->is_filled) {
                 Session::flash(__('error'), __('The user data has already been filled'));
                 return back();

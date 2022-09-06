@@ -6,9 +6,9 @@
                 <div class="col-12">
                     <div class="multisteps-form">
                         <div class="row">
-                            <div class="col-md-6 offset-md-3 m-auto">
+                                @isset($user_data)
                                 @if ($user_data->is_filled)
-                                    <div class="col-12 col-lg-12 m-auto">
+                                    <div class="col-md-12 col-lg-12 m-auto">
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="text-center">
@@ -152,8 +152,16 @@
                                             </div>
                                         </div>
                                     </div>
-                            </div>
                             @endif
+                            @else
+                            <div class="card p-5">
+                                <div class="card-body py-5">
+                                    <div class="text-center mt-4 mb-4">
+                                        No data available yet, please check back later
+                                    </div>
+                                </div>
+                            </div>
+                            @endisset
                         </div>
                     </div>
                 </div>

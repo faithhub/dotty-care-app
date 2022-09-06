@@ -20,9 +20,11 @@ class Usercontroller extends Controller
     {
         $data['title'] = "User Report";
         $data['user_data'] = $user_data = UserData::where('user_id', Auth::user()->id)->first();
-        $data['call_details'] = $user_data->call_details;
-        $data['assessment'] = $user_data->assessment;
-        $data['treatment'] = $user_data->treatment;
+        if ($user_data) {
+            $data['call_details'] = $user_data->call_details;
+            $data['assessment'] = $user_data->assessment;
+            $data['treatment'] = $user_data->treatment;
+        }
         return view('users.report', $data);
     }
 
