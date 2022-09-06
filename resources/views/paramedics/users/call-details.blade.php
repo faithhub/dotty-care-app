@@ -37,7 +37,7 @@
                                         <div class="multisteps-form__content">
                                             <div class="row text-start">
                                                 <div class="col-6 col-md-6 ms-auto mt-3">
-                                                    <label>Surname {{ $is_call_details_filled }}<span
+                                                    <label>Surname<span
                                                             class="text-danger">*</span></label>
                                                     <input class="multisteps-form__input form-control" type="text"
                                                         name="surname">
