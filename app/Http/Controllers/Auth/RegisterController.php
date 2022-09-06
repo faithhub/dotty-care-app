@@ -72,7 +72,7 @@ class RegisterController extends Controller
         return User::create([
             // 'name' => $data['name'],
             'email' => $data['email'],
-            'unique_id' => $unique_id,
+            'unique_id' => strtoupper($unique_id),
             'role' => 'user',
             'password' => Hash::make($data['password']),
         ]);
@@ -130,14 +130,14 @@ class RegisterController extends Controller
         switch ($role) {
 
             case 'user':
-                return route('home');
+                return route('user');
                 break;
 
             case 'paramedic':
-                // return route('mtn_home');
+                return route('paramedic');
                 break;
             default:
-                return '/home';
+                return '/user';
                 break;
         }
     }
