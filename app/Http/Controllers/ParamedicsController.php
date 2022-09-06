@@ -214,12 +214,12 @@ class ParamedicsController extends Controller
             );
 
         # code...
+        $this->json_report();
         Session::forget('user_data_id');
         Session::forget('user_data_email');
         Session::forget('user_data_unique_id');
         Session::flash("success", "Record saved successfully");
         Session::flash('saved', true);
-        $this->json_report();
         return redirect()->route('add-user');
     }
 
