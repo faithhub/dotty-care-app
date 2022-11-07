@@ -46,6 +46,16 @@ Route::group(['middleware' => ['auth']], function () {
         Route::match(['get'], 'download-pdf', [App\Http\Controllers\Usercontroller::class, 'download_pdf'])->name('download-pdf');
     });
 
+    Route::group(['middleware' => ['doctor']], function () {
+        // User
+        Route::match(['get', 'post'], 'doctor', [App\Http\Controllers\DoctorController::class, 'index'])->name('doctor');
+        Route::match(['get', 'post'], 'check-patient', [App\Http\Controllers\DoctorController::class, 'patient'])->name('patient');
+        Route::match(['get', 'post'], 'patient-report', [App\Http\Controllers\DoctorController::class, 'patient_report'])->name('patient-report');
+        // Route::match(['get', 'post'], 'call-details', [App\Http\Controllers\CallDetailsController::class, 'index'])->name('call-details');
+        // Route::match(['get'], 'user-call-report', [App\Http\Controllers\DoctorController::class, 'report'])->name('report');
+        // Route::match(['get'], 'download-pdf', [App\Http\Controllers\DoctorController::class, 'download_pdf'])->name('download-pdf');
+    });
+
 
     Route::group(['middleware' => ['paramedic']], function () {
         //Paramedic
@@ -70,7 +80,6 @@ Route::group(['middleware' => ['auth']], function () {
             //     [App\Http\Controllers\ParamedicsController::class, 'json_report']
             // )->name('json-report');
         });
-
     });
 
 

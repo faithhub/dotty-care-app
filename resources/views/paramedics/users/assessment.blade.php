@@ -1438,10 +1438,17 @@
         </div>
     </div>
 
+    <span id="my-data" data-points="{{ json_encode($assessment, true) ?? '[]' }}"></span>
     <script>
         // Get Object literal from LocalStorage
         let memory = JSON.parse(localStorage.memory || "{}");
 
+        var allData = document.getElementById("my-data")
+        var data = JSON.parse(allData.getAttribute('data-points'));
+        if(data.length != 0)
+        {
+            memory = data;
+        }
         // Loop input elements on page
         [...document.querySelectorAll('input, textarea')].forEach(el => {
 

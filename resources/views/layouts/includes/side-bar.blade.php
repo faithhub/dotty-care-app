@@ -23,8 +23,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('report') }}" class="nav-link {{ request()->is('user-call-report') ? 'active' : '' }}" aria-controls="authExamples" role="button"
-                        aria-expanded="false">
+                    <a href="{{ route('report') }}"
+                        class="nav-link {{ request()->is('user-call-report') ? 'active' : '' }}"
+                        aria-controls="authExamples" role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-copy-04 text-secondary text-sm opacity-10"></i>
@@ -57,10 +58,61 @@
             @endif
 
 
+
+            @if (Auth::user()->role == 'doctor')
+                <li class="nav-item">
+                    <a href="{{ route('doctor') }}"
+                        class="nav-link {{ request()->is('doctor') ? 'active' : '' }}" aria-controls="pagesExamples"
+                        role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ni ni-shop text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('patient') }}"
+                        class="nav-link {{ request()->is('check-patient') || request()->is('patient-report') || request()->is('assessment') || request()->is('treatment') || request()->is('call-report') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">View Call Report</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('profile') }}" class="nav-link {{ request()->is('profile') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ni ni-single-02 text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('password') }}"
+                        class="nav-link {{ request()->is('update-password') ? 'active' : '' }}"
+                        aria-controls="pagesExamples" role="button" aria-expanded="false">
+                        <div
+                            class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
+                            <i class="ni ni-ungroup text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Change Password</span>
+                    </a>
+                </li>
+            @endif
+
+
             @if (Auth::user()->role == 'paramedic')
                 <li class="nav-item">
-                    <a href="{{ route('paramedic') }}" class="nav-link {{ request()->is('paramedic') ? 'active' : '' }}"
-                        aria-controls="pagesExamples" role="button" aria-expanded="false">
+                    <a href="{{ route('paramedic') }}"
+                        class="nav-link {{ request()->is('paramedic') ? 'active' : '' }}" aria-controls="pagesExamples"
+                        role="button" aria-expanded="false">
                         <div
                             class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center">
                             <i class="ni ni-shop text-warning text-sm opacity-10"></i>

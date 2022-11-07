@@ -22,8 +22,8 @@ class UserData extends Model
     ];
 
     protected $casts = [
-        'call_details' => 'array',
-        'assessment' => 'array',
-        'treatment' => 'array'
+        // 'call_details' => 'array',
+        // 'assessment' => 'array',
+        // 'treatment' => 'array'
     ];
 }

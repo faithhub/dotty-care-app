@@ -69,6 +69,9 @@ class LoginController extends Controller
             case 'paramedic':
                 return route('paramedic');
                 break;
+            case 'doctor':
+                return route('doctor');
+                break;
 
             default:
                 # code...

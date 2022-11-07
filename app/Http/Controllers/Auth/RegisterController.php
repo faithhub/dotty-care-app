@@ -135,7 +135,11 @@ class RegisterController extends Controller
 
             case 'paramedic':
                 return route('paramedic');
+
+            case 'doctor':
+                return route('doctor');
                 break;
+
             default:
                 return '/user';
                 break;

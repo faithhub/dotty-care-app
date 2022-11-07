@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\UserData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use PDF;
 
 class Usercontroller extends Controller
@@ -21,9 +22,9 @@ class Usercontroller extends Controller
         $data['title'] = "User Report";
         $data['user_data'] = $user_data = UserData::where('user_id', Auth::user()->id)->first();
         if ($user_data) {
-            $data['call_details'] = $user_data->call_details;
-            $data['assessment'] = $user_data->assessment;
-            $data['treatment'] = $user_data->treatment;
+            $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details));
+            $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
+            $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
         }
         return view('users.report', $data);
     }
@@ -32,9 +33,9 @@ class Usercontroller extends Controller
     {
         $data['user'] = $user = User::find(Auth::user()->id);
         $data['user_data'] = $user_data = UserData::where('user_id', Auth::user()->id)->first();
-        $data['call_details'] = $user_data->call_details;
-        $data['assessment'] = $user_data->assessment;
-        $data['treatment'] = $user_data->treatment;
+        $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details));
+        $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
+        $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
 
         $pdf = PDF::loadView('users.pdf', $data);
 

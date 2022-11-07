@@ -1,10 +1,7 @@
 @extends('layouts.user')
 @section('content')
     <div class="row mb-5">
-        <div class="col-lg-3">
-            @include('layouts.includes.user-nav')
-        </div>
-        <div class="col-lg-9 mt-lg-0 mt-4">
+        <div class="col-lg-8 offset-lg-2 mt-lg-0 mt-4">
             <div class="row container">
                 <div class="col-12">
                     <div class="card">
@@ -53,11 +50,21 @@
                                 @else
                                     <label>User's Unique Identification Number</label>
                                     <div class="mb-3">
-                                        <input type="text" name="unique_id"
+                                        <input type="" name="unique_id"
                                             class="form-control @error('unique_id') is-invalid @enderror"
-                                            placeholder="Unique Identification Number" aria-label="Email"
-                                            value="{{ old('unique_id') }}">
+                                            placeholder="Unique Identification Number" value="{{ old('unique_id') }}">
                                         @error('unique_id')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                    <label>Doctor's Password</label>
+                                    <div class="mb-3">
+                                        <input type="password" name="password"
+                                            class="form-control @error('password') is-invalid @enderror"
+                                            placeholder="***********">
+                                        @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>

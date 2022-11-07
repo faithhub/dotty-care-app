@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\UserData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
@@ -84,20 +85,7 @@ class ParamedicsController extends Controller
         if ($_POST) {
             $data = $request->except(['_token']);
             $user_id = Session::get('user_data_id');
-
-            // dd($data);
-            // $rules = array(
-            //     'first_name' => ['required', 'string', 'max:255'],
-            //     'last_name' => ['required', 'string', 'max:255'],
-            // );
-
-            // $validator = Validator::make($request->all(), $rules);
-
-            // if ($validator->fails()) {
-            //     Session::flash(__('warning'),  __('All fields are required'));
-            //     return back()->withErrors($validator)->withInput();
-            // }
-
+            $data = Crypt::encryptString(serialize($data));
             $user = UserData::where('user_id', $user_id)->first();
             if ($user) {
                 DB::table('user_data')
@@ -115,11 +103,9 @@ class ParamedicsController extends Controller
 
         $user_id = Session::get('user_data_id');
         $user_data = UserData::where('user_id', $user_id)->first();
-        $data['call_details'] = $user_data->call_details;
+        $data['call_details'] = $call_details = $user_data->call_details;
+        $data['call_details'] = unserialize(Crypt::decryptString($call_details));
         $data['is_call_details_filled'] = $user_data->is_call_details_filled;
-        // $user = CallDetails::where('user_id', $user_id)->select('data', 'created_at')->get();
-        // $json1 = json_encode($user[0]->is_call_details_filled);
-        // dd($json1);
         $data['title'] = "User Call Details";
         return view('paramedics.users.call-details', $data);
     }
@@ -130,6 +116,7 @@ class ParamedicsController extends Controller
             $data = $request->except(['_token']);
             $user_id = Session::get('user_data_id');
 
+            $data = Crypt::encryptString(serialize($data));
             $user = UserData::where('user_id', $user_id)->first();
             if ($user) {
                 DB::table('user_data')
@@ -146,7 +133,11 @@ class ParamedicsController extends Controller
         }
 
         $data['title'] = "User Assessment";
-        return view('paramedics.users.assessment');
+        $user_id = Session::get('user_data_id');
+        $user_data = UserData::where('user_id', $user_id)->first();
+        $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
+        $data['is_assessment_filled'] = $user_data->is_assessment_filled;
+        return view('paramedics.users.assessment', $data);
     }
 
     public function treatment(Request $request)
@@ -155,6 +146,7 @@ class ParamedicsController extends Controller
             $data = $request->except(['_token']);
             $user_id = Session::get('user_data_id');
 
+            $data = Crypt::encryptString(serialize($data));
             $user = UserData::where('user_id', $user_id)->first();
             if ($user) {
                 DB::table('user_data')
@@ -169,8 +161,13 @@ class ParamedicsController extends Controller
             }
             return redirect()->route('call-report');
         }
+        
         $data['title'] = "User Treatment";
-        return view('paramedics.users.treatment');
+        $user_id = Session::get('user_data_id');
+        $user_data = UserData::where('user_id', $user_id)->first();
+        $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
+        $data['is_treatment_filled'] = $user_data->is_treatment_filled;
+        return view('paramedics.users.treatment', $data);
     }
 
     public function call_report()
@@ -179,9 +176,9 @@ class ParamedicsController extends Controller
             $data['title'] = "User Call Report";
             $user_id = Session::get('user_data_id');
             $data['user_data'] = $user_data = UserData::where('user_id', $user_id)->first();
-            $data['call_details'] = $user_data->call_details;
-            $data['assessment'] = $user_data->assessment;
-            $data['treatment'] = $user_data->treatment;
+            $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details));
+            $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
+            $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
             return view('paramedics.users.call-report', $data);
         } catch (\Throwable $th) {
             //throw $th;
@@ -241,9 +238,9 @@ class ParamedicsController extends Controller
         }
 
         $user = UserData::where('user_id', $user_id)->select('call_details', 'assessment', 'treatment')->get();
-        $call_details = json_encode($user[0]->call_details);
-        $assessment = json_encode($user[0]->assessment);
-        $treatment = json_encode($user[0]->treatment);
+        $call_details = json_encode(unserialize(Crypt::decryptString($user[0]->call_details)));
+        $assessment = json_encode(unserialize(Crypt::decryptString($user[0]->assessment)));
+        $treatment = json_encode(unserialize(Crypt::decryptString($user[0]->treatment)));
         $json = (object)array_merge((array) json_decode($call_details), (array) json_decode($assessment), (array) json_decode($treatment));
 
         $fileName = time() . '_user_data.json';

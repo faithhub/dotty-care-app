@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +19,7 @@ class SettingsController extends Controller
             $data['title'] = 'Profile';
             if ($_POST) {
                 $rules = array(
-                    'name' => ['required', 'string', 'max:255'],
+                    'name' => ['required_if:role,paramedic'],
                     'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,' . Auth::user()->id],
                 );
 

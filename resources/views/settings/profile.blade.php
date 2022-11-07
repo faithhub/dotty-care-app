@@ -15,8 +15,16 @@
                             </div>
                         @endif
                     </div>
+                    <div class="text-center">
+                        @if (session()->has('error'))
+                            <div class="notification-error mb-3">
+                                {{ session()->get('error') }}
+                            </div>
+                        @endif
+                    </div>
                     @csrf
                     <input type="hidden" name="id" value="{{ Auth::user()->id }}">
+                    <input type="hidden" name="role" value="{{ Auth::user()->role }}">
                     <div class="card-body pt-0">
                         <div class="row">
                             <div class="col-12 mb-4">
@@ -24,7 +32,7 @@
                                     @if (Auth::user()->role == 'paramedic')
                                         Vehincle Number
                                     @endif
-                                    @if (Auth::user()->role == 'user')
+                                    @if (Auth::user()->role == 'user' || Auth::user()->role == 'doctor')
                                         Unique Identification Number
                                     @endif
                                 </label>
@@ -35,26 +43,26 @@
                             </div>
                         </div>
                         @if (Auth::user()->role == 'paramedic')
-                        <div class="row">
-                            <div class="col-12 mb-4">
-                                <label class="form-label">Name</label>
-                                <div class="input-group">
-                                    <input id="name" name="name" class="form-control" type="text"
-                                        placeholder="Alec" value="{{ Auth::user()->name }}">
+                            <div class="row">
+                                <div class="col-12 mb-4">
+                                    <label class="form-label">Name</label>
+                                    <div class="input-group">
+                                        <input id="name" name="name" class="form-control" type="text"
+                                            placeholder="Alec" value="{{ Auth::user()->name }}">
+                                    </div>
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
-                        </div>
                         @endif
                         <div class="row">
                             <div class="col-12">
                                 <label class="form-label mt-4">Email</label>
                                 <div class="input-group">
-                                    <input id="email" name="email" class="form-control" type="email"
+                                    <input id="email" name="email" class="form-control" type=""
                                         placeholder="example@email.com" value="{{ Auth::user()->email }}">
                                 </div>
                             </div>

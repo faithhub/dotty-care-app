@@ -32,6 +32,10 @@ class RedirectIfAuthenticated
                         # code...
                         return redirect()->intended('paramedic');
                         break;
+                    case 'doctor':
+                        # code...
+                        return redirect()->intended('doctor');
+                        break;
                     default:
                         # code...
                         break;
