@@ -316,9 +316,10 @@
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Eye</label>
                                                             <select class="form-control" name="glascow_eye" id="Co-Respoders">
-                                                                <option value="Argentina">unchanged</option>
-                                                                <option value="Brasil">Improved</option>
-                                                                <option value="Brasil">Deteriorated</option>
+                                                                <option value="Spontaneously">Spontaneously</option>
+                                                                <option value="To verbal command">To verbal command</option>
+                                                                <option value="To Pain">To Pain</option>
+                                                                <option value="No response">No response</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -327,15 +328,19 @@
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Verbal</label>
                                                             <select class="form-control" name="glascow_verbal" id="Co-Respoders">
-                                                                    <option value="Argentina">yes</option>
-                                                                    <option value="Brasil">no</option>
+                                                                    <option value="Oriented and Converses">Oriented and Converses</option>
+                                                                    <option value="Disoriented and Converses">Disoriented and Converses</option>
                                                                     </select>
                                                         </div>
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Glascow Motor</label>
                                                             <select class="form-control" name="glascow_motor" id="Co-Respoders">
-                                                                    <option value="Argentina">yes</option>
-                                                                    <option value="Brasil">no</option>
+                                                                    <option value="Obeys">Obeys</option>
+                                                                    <option value="Localize Pain">Localize Pain</option>
+                                                                    <option value="Flexion (Withdrawal)">Flexion (Withdrawal)</option>
+                                                                    <option value="Flexion (Abnormal - Decorticate Rigidity)">Flexion (Abnormal - Decorticate Rigidity)</option>
+                                                                    <option value="Extension (Decerebrate Rigidity)">Extension (Decerebrate Rigidity)</option>
+                                                                    <option value="No Response">No Response</option>
                                                                     </select>
                                                         </div>
                                                     </div>
@@ -349,9 +354,10 @@
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Reactivity</label>
                                                             <select class="form-control" name="reactivity" id="treatment rendered">
-                                                                <option value="Argentina">Yes</option>
-                                                                <option value="Brasil">No</option>
-                                                                <option value="Brasil">Unknown</option>
+                                                                <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
+                                                                <option value="Abnormal">Abnormal</option>
+                                                                <option value="Not assessed">Not assessed</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -366,9 +372,10 @@
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Reactivity</label>
                                                             <select class="form-control" name="reactivity" id="treatment rendered">
-                                                            <option value="Argentina">Yes</option>
-                                                            <option value="Brasil">No</option>
-                                                            <option value="Brasil">Unknown</option>
+                                                            <option value="Yes">Yes</option>
+                                                                <option value="No">No</option>
+                                                                <option value="Abnormal">Abnormal</option>
+                                                                <option value="Not assessed">Not assessed</option>
                                                         </select>
                                                         </div>
                                                     </div>
@@ -571,9 +578,25 @@
                                                         <div class="col-6 col-md-6 ms-auto mt-3">
                                                             <label>Cardiac Rhythm   </label>
                                                             <select class="form-control" name="cardiac_rhythm" id="treatment rendered">
-                                                                <option value="">Yes</option>
-                                                                <option value="">No</option>
+                                                                <option value="">Normal Sinus Rhythm</option>
+                                                                <option value="">Sinus Bradycardia</option>
+                                                                <option value="">Agonal</option>
+                                                                <option value="">Artifact</option>
+                                                                <option value="">Atrial Fibrillation/ Flutter</option>
+                                                                <option value="">AV Block (1st degree)</option>
+                                                                <option value="">AV Block (2nd degree)</option>
+                                                                <option value="">AV Block (3rd degree)</option>
+                                                                <option value="">Junctional</option>
+                                                                <option value="">Bundle Branch Block</option>
+                                                                <option value="">Paced Rhythm</option>
+                                                                <option value="">PACs</option>
+                                                                <option value="">PVCs</option>
+                                                                <option value="">Sinus Dysrhythmia</option>
+                                                                <option value="">SVT</option>
+                                                                <option value="">V-fibrillation</option>
+                                                                <option value="">V-tachycardia</option>
                                                                 <option value="">Unknown</option>
+                                                                <option value="">Other</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -751,8 +774,10 @@
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Coughing</label>
                                                             <select class="form-control col-4 col-md-2" name="coughing" id="choose-race">
-                                                        <option value="Black">Yes</option>
-                                                        <option value="White">No</option>
+                                                        <option value="Black">No cough</option>
+                                                        <option value="White">Productive (with phlegm)</option>
+                                                        <option value="White">Non-productive (no phlegm)</option>
+                                                        <option value="White">Not noted</option>
                                                         </select>
                                                         </div>
                                                     </div>
@@ -826,16 +851,25 @@
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Witness Siezure</label>
                                                             <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                            <option value="Black">Family / Friend</option>
+                                                                <option value="White">Bystander</option>
+                                                                <option value="White">Fire service personnel</option>
+                                                                <option value="White">Law enforcement personnel</option>
+                                                                <option value="White">Other first responder</option>
+                                                                <option value="White">Ambulance Crew</option>
+                                                                <option value="White">Other</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Type Of Siezure</label>
                                                             <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
-                                                            <option value="Black">Yes</option>
-                                                            <option value="White">No</option>
+                                                            <option value="Black">Family / Friend</option>
+                                                                <option value="White">Bystander</option>
+                                                                <option value="White">Fire service personnel</option>
+                                                                <option value="White">Law enforcement personnel</option>
+                                                                <option value="White">Other first responder</option>
+                                                                <option value="White">Ambulance Crew</option>
+                                                                <option value="White">Other</option>
                                                         </select>
                                                         </div>
                                                     </div>
@@ -873,24 +907,37 @@
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Nature of Exposure</label>
                                                             <select class="form-control col-4 col-md-2" name="nature_of_exposure" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Accidental</option>
+                                                                <option value="White">Intentional (self-inflicted)</option>
+                                                                <option value="White">Unknown</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Type Of Substance</label>
                                                             <select class="form-control col-4 col-md-2" name="type_of_substance" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">Unknown</option>
+                                                                <option value="White">Medications</option>
+                                                                <option value="Brown">Alcohol</option>
+                                                                <option value="Brown">Chemicals</option>
+                                                                <option value="Brown">Plants</option>
+                                                                <option value="Brown">Food</option>
+                                                                <option value="Brown">Venom</option>
+                                                                <option value="Brown">Radioactive material</option>
+                                                                <option value="Brown">Smoke / Gas</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Route Of Entry</label>
                                                             <select class="form-control col-4 col-md-2" name="route_of_entry" id="choose-race">
-                                                            <option value="Black">Yes</option>
-                                                            <option value="White">No</option>
+                                                            <option value="Black">Unknown</option>
+                                                            <option value="White">Ingestion</option>
+                                                            <option value="White">Inhalation</option>
+                                                            <option value="White">Absorption</option>
+                                                            <option value="White">Injection</option>
+                                                            <option value="White">Bite / Sting</option>
+                                                            <option value="White">Other</option>
                                                         </select>
                                                         </div>
                                                     </div>
@@ -899,17 +946,24 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Type Of Reaction To Substance</label>
                                                             <select class="form-control col-4 col-md-2" name="type_of_reaction_to_substance" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Local reaction</option>
+                                                                <option value="White">GI disturbances</option>
+                                                                <option value="White">Respiratory distress</option>
+                                                                <option value="White">Systemic symptoms</option>
+                                                                <option value="White">Loss of consciousness</option>
+                                                                <option value="White">Other</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Evidence Of Substance</label>
-                                                            <select class="form-control col-4 col-md-2" name="evidence_of_substance" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                            <select class="form-control col-4 col-md-2" name="type_of_reaction_to_substance" id="choose-race">
+                                                                <option value="Black">Local reaction</option>
+                                                                <option value="White">GI disturbances</option>
+                                                                <option value="White">Respiratory distress</option>
+                                                                <option value="White">Systemic symptoms</option>
+                                                                <option value="White">Loss of consciousness</option>
+                                                                <option value="White">Other</option>
                                                             </select>
                                                         </div>
 
@@ -949,17 +1003,23 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Arrest Classification</label>
                                                             <select class="form-control col-4 col-md-2" name="arrest_classification" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Cardiac</option>
+                                                                <option value="White">Non-cardiac</option>
+                                                                <option value="White">Unknown</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Witness Of Arrest</label>
                                                             <select class="form-control col-4 col-md-2" name="witness_of_arrest" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">Not witnessed</option>
+                                                                <option value="White">Family / Friend</option>
+                                                                <option value="Brown">Bystander</option>
+                                                                <option value="Brown">Fire service personnel</option>
+                                                                <option value="Brown">Law enforcement personnel</option>
+                                                                <option value="Brown">Other first responder</option>
+                                                                <option value="Brown">Ambulance crew</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
 
@@ -987,9 +1047,8 @@
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Deribrillation prior to Ambulance Arrival</label>
                                                             <select class="form-control col-4 col-md-2" name="deribrillation_prior-to_ambulance_arrival" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">Yes</option>
+                                                                <option value="White">No</option>
                                                             </select>
                                                         </div>
 
@@ -1026,17 +1085,23 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Type Of Ambulance Defibrillatot</label>
                                                             <select class="form-control col-4 col-md-2" name="types+of_ambulance_deribrillator" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Unknown</option>
+                                                                <option value="White">Monophasic</option>
+                                                                <option value="Brown">Biphasic</option>
+                                                                <option value="Brown">Manual</option>
+                                                                <option value="Brown">Automated</option>
+                                                                <option value="Brown">Semi-automated</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Reason CPR Disconti. in the field</label>
                                                             <select class="form-control col-4 col-md-2" name="reason_cpr_discount" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">Protocol</option>
+                                                                <option value="White">Order via online medical control</option>
+                                                                <option value="Brown">Unsafe scene</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
 
@@ -1045,18 +1110,21 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Reason Not Initating CPR</label>
                                                             <select class="form-control col-4 col-md-2" name="reason_not_initating_cpr" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">Obivious death protocol criteria met</option>
+                                                                <option value="White">valid 'Do Not Resuscitate' order</option>
+                                                                <option value="Brown">Delayed resuscitation access to a patient with confirmed vital signs absent</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Peacemaker / impplant Defib</label>
                                                             <select class="form-control col-4 col-md-2" name="peacemaker_impplant_defib" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">No</option>
+                                                                <option value="White">Unknown</option>
+                                                                <option value="Brown">Pacemaker</option>
+                                                                <option value="Brown">Implanted Defibrillator</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -1102,16 +1170,25 @@
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Responce To Medication</label>
                                                             <select class="form-control col-4 col-md-2" name="choose-race" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Unchanged</option>
+                                                                <option value="White">Improved</option>
+                                                                <option value="White">Deteriorated</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-4 ms-auto mt-3">
                                                             <label>Type Of Pain</label>
                                                             <select class="form-control col-4 col-md-2" name="type_of_pain" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Dull</option>
+                                                                <option value="White">Aching</option>
+                                                                <option value="Black">Burning</option>
+                                                                <option value="White">Sharp</option>
+                                                                <option value="Black">Throbbing</option>
+                                                                <option value="White">Cramping</option>
+                                                                <option value="Black">Heavy</option>
+                                                                <option value="White">Tearing</option>
+                                                                <option value="Black">Other</option>
+                                                                
                                                             </select>
                                                         </div>
 
@@ -1122,17 +1199,23 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Source Of Pain</label>
                                                             <select class="form-control col-4 col-md-2" name="source_pain" id="choose-race">
-                                                                <option value="Black">Yes</option>
-                                                                <option value="White">No</option>
+                                                                <option value="Black">Chest cardiac</option>
+                                                                <option value="White">Chest respiratory</option>
+                                                                <option value="Black">Chest musculoskeletal</option>
+                                                                <option value="White">Other</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Pain Radiation Site</label>
                                                             <select class="form-control col-4 col-md-2" name="pain_reduction_site" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">No radiation / Localized</option>
+                                                                <option value="White">Head / Neck</option>
+                                                                <option value="Brown">Chest</option>
+                                                                <option value="Black">Abdomen</option>
+                                                                <option value="White">Left arm</option>
+                                                                <option value="Brown">Right arm</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
 
@@ -1141,18 +1224,23 @@
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>State At Onset</label>
                                                             <select class="form-control col-4 col-md-2" name="state_at_onset" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">Inactive</option>
+                                                                <option value="White">Mild activity</option>
+                                                                <option value="Brown">Intense activity</option>
+                                                                <option value="Black">Resting</option>
+                                                                <option value="White">Sleeping</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
 
                                                         <div class="col-12 col-md-6 ms-auto mt-3">
                                                             <label>Pacemaker / Implanted Defibrillator</label>
                                                             <select class="form-control col-4 col-md-2" name="pacemaker_implanted_defibrillator" id="choose-race">
-                                                                <option value="Black">Unchanged</option>
-                                                                <option value="White">Improved</option>
-                                                                <option value="Brown">Deteriorated</option>
+                                                                <option value="Black">No</option>
+                                                                <option value="White">Unknown</option>
+                                                                <option value="Brown">Pacemaker</option>
+                                                                <option value="White">Implanted Defibrillator</option>
+                                                                <option value="Brown">Other</option>
                                                             </select>
                                                         </div>
                                                     </div>
