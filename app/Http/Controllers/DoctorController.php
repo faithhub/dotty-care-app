@@ -97,6 +97,7 @@ class DoctorController extends Controller
                     'detail_id' => $detail->id,
                     'report' => $request->report
                 ]);
+                Session::forget('patient_id');
                 Session::flash('success', "Report Updated Successfully");
                 return redirect()->route('patient-report');
             }
@@ -106,7 +107,7 @@ class DoctorController extends Controller
             }
             $data['title'] = "User Report";
             $data['user_data'] = $user_data = UserData::where('user_id', $patient_id)->first();
-            $data['reports'] = Report::where(['detail_id' => $user_data->id, 'user_id' => $user_data->user_id, 'paramedic_id' => $user_data->paramedic_id])->with('doctor')->get();
+            $data['reports'] = Report::where(['detail_id' => $user_data->id, 'user_id' => $user_data->user_id, 'paramedic_id' => $user_data->paramedic_id])->with('doctor')->orderBy('created_at', 'DESC')->get();
             if ($user_data) {
                 $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details));
                 $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));

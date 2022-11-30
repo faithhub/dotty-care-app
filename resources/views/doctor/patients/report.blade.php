@@ -180,7 +180,7 @@
                                                                         <form role="form" method="POST"
                                                                             action="{{ route('patient-report') }}">
                                                                             @csrf
-                                                                            <input type="" name="detail_id"
+                                                                            <input type="hidden" name="detail_id"
                                                                                 value="{{ $user_data->id }}">
                                                                             <div class="mb-3">
                                                                                 <textarea type="text" name="report" class="form-control" rows="5" placeholder="Write Record"
