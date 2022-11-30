@@ -53,6 +53,10 @@
                         Are you a Paramedics?
                         <a href="{{ route('paramedics') }}" class="text-primary font-weight-bold">Register Here</a>
                     </p>
+                    <p class="mb-1 mx-auto">
+                        Are you a Doctor?
+                        <a href="{{ route('doctor-signup') }}" class="text-primary font-weight-bold">Register Here</a>
+                    </p>
                     <p class="mb-4 mx-auto">
                         Already have an account?
                         <a href="{{ route('login') }}" class="text-primary font-weight-bold">Sign in</a>

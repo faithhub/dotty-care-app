@@ -34,6 +34,9 @@ Route::match(['get'], 'user', [App\Http\Controllers\Auth\RegisterController::cla
 // Paramedics Auth
 Route::match(['get', 'post'], 'paramedics', [App\Http\Controllers\Auth\RegisterController::class, 'paramedics'])->name('paramedics');
 
+// Doctor Auth
+Route::match(['get', 'post'], 'doctor-signup', [App\Http\Controllers\Auth\RegisterController::class, 'doctor'])->name('doctor-signup');
+
 
 Route::group(['middleware' => ['auth']], function () {
 

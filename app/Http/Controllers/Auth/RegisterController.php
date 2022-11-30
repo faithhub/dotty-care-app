@@ -124,6 +124,51 @@ class RegisterController extends Controller
         $data['title'] = "Paramedics Sign Up";
         return view('auth.paramedic-sign-up', $data);
     }
+    public function doctor(Request $request)
+    {
+        if ($_POST) {
+            # code...
+            $rules = array(
+                'name' => ['required', 'string', 'max:50'],
+                'hospital' => ['required', 'string', 'max:100'],
+                // 'unique_id' => ['required', 'string', 'max:50', 'unique:users'],
+                'email' => [
+                    'required', 'string', 'email', 'max:50', 'unique:users'
+                ],
+                'password' => ['required', 'string', 'min:8', 'max:16', 'confirmed'],
+            );
+
+            // dd($request->all());
+            $fieldNames = array(
+                // 'unique_id' => 'Doctor',
+            );
+
+            $validator = Validator::make($request->all(), $rules);
+            $validator->setAttributeNames($fieldNames);
+
+            if ($validator->fails()) {
+                if (isset($request->id)) {
+                    # code...
+                    return back()->withErrors($validator);
+                }
+                return back()->withErrors($validator)->withInput();
+            }
+
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'role' => 'doctor',
+                'hospital' => $request->hospital,
+                'unique_id' => uniqid("DOC"),
+                'password' => Hash::make($request->password),
+            ]);
+
+            Session::flash('success', 'Registered Successfully');
+            return redirect()->route('login');
+        }
+        $data['title'] = "Doctor Sign Up";
+        return view('auth.doctor', $data);
+    }
     public function redirectTo()
     {
         $role = Auth::user()->role;

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('role')->enum(['user', 'paramedic', 'doctor']);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('hospital')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

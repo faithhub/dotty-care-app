@@ -5,10 +5,10 @@
         <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
             <div class="card card-plain">
                 <div class="card-header pb-0 text-left">
-                    <h4 class="font-weight-bolder">Paramedics Sign Up</h4>
+                    <h4 class="font-weight-bolder">Doctor Sign Up</h4>
                 </div>
                 <div class="card-body pb-3">
-                    <form role="form" method="POST" action="{{ route('paramedics') }}">
+                    <form role="form" method="POST" action="{{ route('doctor-signup') }}">
                         @csrf
                         <label>Full Name</label>
                         <div class="mb-3">
@@ -30,12 +30,12 @@
                                 </span>
                             @enderror
                         </div>
-                        <label>Vehicle ID Number</label>
+                        <label>Hospital</label>
                         <div class="mb-3">
-                            <input type="text" name="unique_id"
-                                class="form-control @error('unique_id') is-invalid @enderror"
-                                placeholder="Vehicle ID Number" aria-label="Text" value="{{ old('unique_id') }}">
-                            @error('unique_id')
+                            <input type="text" name="hospital"
+                                class="form-control @error('hospital') is-invalid @enderror"
+                                placeholder="Hospital Name" aria-label="Text" value="{{ old('hospital') }}">
+                            @error('hospital')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -70,14 +70,6 @@
                     </form>
                 </div>
                 <div class="card-footer text-center pt-0 px-sm-4 px-1">
-                    <p class="mb-1 mx-auto">
-                        Are you a Paramedics?
-                        <a href="{{ route('paramedics') }}" class="text-primary font-weight-bold">Register Here</a>
-                    </p>
-                    <p class="mb-1 mx-auto">
-                        Are you a Doctor?
-                        <a href="{{ route('doctor-signup') }}" class="text-primary font-weight-bold">Register Here</a>
-                    </p>
                     <p class="mb-4 mx-auto">
                         Already have an account?
                         <a href="{{ route('login') }}" class="text-primary font-weight-bold">Sign in</a>
