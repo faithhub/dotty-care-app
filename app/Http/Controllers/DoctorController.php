@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Validator;
 
 class DoctorController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $dommy_data = Crypt::encryptString(serialize(array("Apple", "Banana", "Orange")));
+        $this->dommy_data = $dommy_data;
+    }
+
     public function index()
     {
         $data['title'] = "Doctor Dashboard";
@@ -109,9 +116,9 @@ class DoctorController extends Controller
             $data['user_data'] = $user_data = UserData::where('user_id', $patient_id)->first();
             $data['reports'] = Report::where(['detail_id' => $user_data->id, 'user_id' => $user_data->user_id, 'paramedic_id' => $user_data->paramedic_id])->with('doctor')->orderBy('created_at', 'DESC')->get();
             if ($user_data) {
-                $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details));
-                $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
-                $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
+                $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details ?? $this->dommy_data));
+                $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment ?? $this->dommy_data));
+                $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment ?? $this->dommy_data));
             }
             return view('doctor.patients.report', $data);
         } catch (\Throwable $th) {

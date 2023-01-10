@@ -19,6 +19,8 @@ class ParamedicsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $dommy_data = Crypt::encryptString(serialize(array("Apple", "Banana", "Orange")));
+        $this->dommy_data = $dommy_data;
     }
 
 
@@ -104,7 +106,7 @@ class ParamedicsController extends Controller
         $user_id = Session::get('user_data_id');
         $user_data = UserData::where('user_id', $user_id)->first();
         $data['call_details'] = $call_details = $user_data->call_details;
-        $data['call_details'] = unserialize(Crypt::decryptString($call_details));
+        $data['call_details'] = unserialize(Crypt::decryptString($call_details ?? $this->dommy_data));
         $data['is_call_details_filled'] = $user_data->is_call_details_filled;
         $data['title'] = "User Call Details";
         return view('paramedics.users.call-details', $data);
@@ -135,7 +137,7 @@ class ParamedicsController extends Controller
         $data['title'] = "User Assessment";
         $user_id = Session::get('user_data_id');
         $user_data = UserData::where('user_id', $user_id)->first();
-        $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
+        $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment ?? $this->dommy_data));
         $data['is_assessment_filled'] = $user_data->is_assessment_filled;
         return view('paramedics.users.assessment', $data);
     }
@@ -165,7 +167,7 @@ class ParamedicsController extends Controller
         $data['title'] = "User Treatment";
         $user_id = Session::get('user_data_id');
         $user_data = UserData::where('user_id', $user_id)->first();
-        $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
+        $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment ?? $this->dommy_data));
         $data['is_treatment_filled'] = $user_data->is_treatment_filled;
         return view('paramedics.users.treatment', $data);
     }
@@ -176,9 +178,9 @@ class ParamedicsController extends Controller
             $data['title'] = "User Call Report";
             $user_id = Session::get('user_data_id');
             $data['user_data'] = $user_data = UserData::where('user_id', $user_id)->first();
-            $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details));
-            $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment));
-            $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment));
+            $data['call_details'] = unserialize(Crypt::decryptString($user_data->call_details ?? $this->dommy_data));
+            $data['assessment'] = unserialize(Crypt::decryptString($user_data->assessment ?? $this->dommy_data));
+            $data['treatment'] = unserialize(Crypt::decryptString($user_data->treatment ?? $this->dommy_data));
             return view('paramedics.users.call-report', $data);
         } catch (\Throwable $th) {
             //throw $th;
@@ -238,9 +240,9 @@ class ParamedicsController extends Controller
         }
 
         $user = UserData::where('user_id', $user_id)->select('call_details', 'assessment', 'treatment')->get();
-        $call_details = json_encode(unserialize(Crypt::decryptString($user[0]->call_details)));
-        $assessment = json_encode(unserialize(Crypt::decryptString($user[0]->assessment)));
-        $treatment = json_encode(unserialize(Crypt::decryptString($user[0]->treatment)));
+        $call_details = json_encode(unserialize(Crypt::decryptString($user[0]->call_details ?? $this->dommy_data)));
+        $assessment = json_encode(unserialize(Crypt::decryptString($user[0]->assessment ?? $this->dommy_data)));
+        $treatment = json_encode(unserialize(Crypt::decryptString($user[0]->treatment ?? $this->dommy_data)));
         $json = (object)array_merge((array) json_decode($call_details), (array) json_decode($assessment), (array) json_decode($treatment));
 
         $fileName = time() . '_user_data.json';
